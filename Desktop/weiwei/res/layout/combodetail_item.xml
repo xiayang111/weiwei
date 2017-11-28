@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_default_101"
+    android:minHeight="@dimen/dp_default_101"
+    android:orientation="vertical"
+    android:background="@color/weiwei_content_background_color"
+    android:layout_marginTop="@dimen/dp_default_10"
+  
+     >
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="@dimen/dp_default_100"
+	    android:orientation="horizontal"
+	   
+	    >
+    <ImageView
+        android:id="@+id/iv_product"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_default_100"
+        android:layout_weight="1"
+        android:padding="@dimen/dp_default_10"
+      />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_default_100"
+        android:layout_weight="2" >
+
+        <TextView
+            android:id="@+id/pro_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="@dimen/dp_default_3"
+            android:singleLine="true"
+            android:textColor="@android:color/background_dark"
+            android:textSize="@dimen/sp_default_18" />
+
+            <TextView
+                android:id="@+id/tv_weight"
+                android:layout_below="@id/pro_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_default_3"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/sp_default_14" />
+		 <TextView
+               	android:id="@+id/tv_num"
+                android:layout_below="@id/tv_weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_default_3"
+                android:text="包含时间"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/sp_default_14" />
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_default_3"
+            android:layout_below="@id/tv_num" >
+
+            <TextView
+                android:id="@+id/tv_shopPrice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="@dimen/sp_default_17"
+                android:textColor="@color/weiwei_gouwuche_red_price" />
+
+            <TextView
+                android:id="@+id/tv_marketPrice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="@dimen/sp_default_17"
+                android:textColor="@color/gray_button_text_color" />
+        </LinearLayout>
+
+        
+    </RelativeLayout>
+    </LinearLayout>
+<View style="@style/WeiWeiContentBorderStyle" android:layout_marginLeft="@dimen/dp_default_10" /> 
+</LinearLayout>

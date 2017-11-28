@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:focusable="true" 
+	android:focusableInTouchMode="true"> 
+    <LinearLayout 
+        android:id="@+id/vlLayoutManage"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/dp_default_5"
+        android:orientation="vertical" >  
+    	<EditText 
+        	android:id="@+id/edtException"
+        	android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"        
+        	android:layout_marginLeft="@dimen/dp_default_10"
+        	android:layout_marginRight="@dimen/dp_default_10"
+        	android:visibility="gone"
+        	android:singleLine="true"
+        	android:imeOptions="actionSend"
+        	/>
+    	<LinearLayout 
+        	android:id="@+id/vlLayout"
+        	android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:layout_marginLeft="@dimen/dp_default_10"
+        	android:layout_marginRight="@dimen/dp_default_10"
+        	android:orientation="horizontal" >
+        	<Button 
+            	android:id="@+id/btnExceptionDebug"
+            	android:layout_width="fill_parent"
+            	android:layout_height="wrap_content"
+            	android:layout_weight="1"
+            	style="?android:attr/button"
+            	android:visibility="gone"
+            	 />
+         	<Button 
+            	android:id="@+id/btnExceptionExit"
+            	android:layout_width="fill_parent"
+            	android:layout_height="wrap_content"
+            	android:layout_weight="1"
+            	style="?android:attr/button"
+            	android:text="退出"
+            	 />
+    	</LinearLayout>
+    </LinearLayout>
+    <ScrollView 
+        android:id="@+id/scroll"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="@dimen/dp_default_10"
+        android:layout_marginRight="@dimen/dp_default_10"
+        android:layout_above="@+id/vlLayoutManage" >
+        <TextView
+            android:id="@+id/txtExceptionInfo"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black" >
+        </TextView>  	
+    </ScrollView>
+</RelativeLayout>

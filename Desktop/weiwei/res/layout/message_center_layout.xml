@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/WeiWeiBaseBackgroundStyle"
+    android:orientation="vertical" >
+
+    <View style="@style/WeiWeiContentBorderStyle" />
+
+    <RadioGroup
+        android:id="@+id/tabs_rg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_default_60"
+       
+        android:gravity="center"
+        android:layout_marginLeft="@dimen/dp_default_5"
+        android:layout_marginRight="@dimen/dp_default_5"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/dp_default_7"
+        android:paddingTop="@dimen/dp_default_7" >
+
+        <RadioButton
+            android:id="@+id/tab_rb_a"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0" 
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="全部"
+            android:background="@drawable/order_tab_seletor_one"
+         
+            android:textColor="@color/message_title_radio_text_color"
+            android:textSize="@dimen/sp_default_17" />
+
+        <RadioButton
+            android:id="@+id/tab_rb_b"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:background="@drawable/order_tab_seletor_two"
+            android:button="@null"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="交易"
+            android:textColor="@color/message_title_radio_text_color"
+            android:textSize="@dimen/sp_default_17" />
+
+        <RadioButton
+            android:id="@+id/tab_rb_c"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+          android:background="@drawable/order_tab_seletor_two"
+            android:button="@null"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="资讯"
+            android:textColor="@color/message_title_radio_text_color"
+            android:textSize="@dimen/sp_default_17" />
+
+        <RadioButton
+            android:id="@+id/tab_rb_d"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+        android:background="@drawable/order_tab_seletor_two"
+            android:button="@null"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="物流"
+            android:textColor="@color/message_title_radio_text_color"
+            android:textSize="@dimen/sp_default_17" />
+
+        <RadioButton
+            android:id="@+id/tab_rb_e"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+              android:background="@drawable/order_tab_seletor_three"
+            android:button="@null"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="提醒"
+            android:textColor="@color/message_title_radio_text_color"
+            android:textSize="@dimen/sp_default_17" />
+    </RadioGroup>
+
+    <com.dongwukj.weiwei.ui.widget.LazyViewPager
+        android:id="@+id/vp_show"
+        android:layout_margin="@dimen/dp_default_5"
+        android:background="#f0f0f0"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp_default_10" />
+
+</LinearLayout>

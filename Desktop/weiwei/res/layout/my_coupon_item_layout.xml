@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/WeiWeiContentBackgroundStyle"
+    android:orientation="horizontal" 
+    
+    android:descendantFocusability="blocksDescendants">
+	
+    <LinearLayout
+     	android:id="@+id/ll"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_default_120"
+        android:layout_weight="2.1"
+		android:background="@drawable/weiwei_coupon_green"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="惟惟"
+            android:textSize="@dimen/sp_default_16"
+            android:layout_marginLeft="@dimen/dp_default_5"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/dp_default_5"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.5"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal" >
+
+            <TextView
+                android:id="@+id/tv_money"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical|right"
+                android:text="5"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_default_45" 
+                android:textStyle="bold"
+                android:layout_marginRight="@dimen/dp_default_5"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="元\n优惠券"
+                android:gravity="center_vertical|left"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_default_18" 
+                android:textStyle="bold"
+                />
+        </LinearLayout>
+		<LinearLayout 
+		    android:layout_width="match_parent"
+		    android:layout_height="0dp"
+		    android:layout_weight="2"
+		    android:orientation="vertical"
+		    >
+		    <TextView
+            android:id="@+id/tv_order_amountlower"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/dp_default_5"
+            android:layout_weight="1"
+            android:gravity="fill_vertical"
+            android:textColor="#25905c"
+            android:textSize="@dimen/sp_default_10"
+            android:textStyle="bold" />
+		    <TextView
+            android:id="@+id/tv_product_name"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/dp_default_5"
+            android:layout_weight="1"
+            android:gravity="fill_vertical"
+            android:text="消费满100元使用(不含促销商品)"
+            android:textColor="@color/weiwei_coupon_color"
+            android:textSize="@dimen/sp_default_10"
+            android:textStyle="bold" 
+            android:visibility="gone"/>
+		</LinearLayout>
+        
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_default_120"
+        android:layout_marginRight="@dimen/dp_default_10"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:textColor="@color/pro_guige"
+            android:textSize="@dimen/sp_default_12"
+            android:text="有效期:" 
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/tv_UseStartTime"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:textColor="@color/pro_guige"
+             android:gravity="center"
+             android:textSize="@dimen/sp_default_12" />
+
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/tv_UseEndTime"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:textColor="@color/pro_guige"
+           android:gravity="center"
+             android:textSize="@dimen/sp_default_12" />
+        
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/tv_claim_coupon"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:textColor="@color/pro_guige"
+            android:text="立即领取" 
+            android:clickable="false"
+             android:gravity="center"
+            android:visibility="visible"
+             android:textSize="@dimen/sp_default_12"
+            />
+    </LinearLayout>
+	
+</LinearLayout>

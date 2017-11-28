@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/weiwei_dialog_backgroud">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="您还没有设置支付密码\n是否立即去设置？"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_default_18" />
+      <View style="@style/WeiWeiContentBorderStyle"/>
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="0dp"
+        android:layout_weight="1"
+	     android:orientation="horizontal"
+	    >
+	    <TextView 
+	        android:id="@+id/tv_cancle"
+	        android:layout_width="0dp"
+	        android:layout_weight="1"
+	        android:layout_height="match_parent"
+	        android:text="取消"
+	        android:textSize="@dimen/sp_default_14"
+	        android:gravity="center"
+	        />
+	   	<TextView 
+	        android:layout_width="@dimen/dp_default_1"
+	      android:background="@color/weiwei_content_border_color"
+	        android:layout_height="match_parent"
+	        
+	        />
+	   	
+		<TextView 
+	        android:id="@+id/tv_ok"
+	        android:layout_width="0dp"
+	        android:layout_weight="1"
+	        
+	        android:textSize="@dimen/sp_default_14"
+	        android:layout_height="match_parent"
+	        android:text="确定"
+	        android:gravity="center" 
+	        />
+	</LinearLayout>
+</LinearLayout>

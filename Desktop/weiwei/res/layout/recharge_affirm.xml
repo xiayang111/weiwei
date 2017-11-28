@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/WeiWeiBaseBackgroundStyle"
+    android:orientation="vertical" >
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/weiwei_base_text_bg"
+        android:padding="@dimen/dp_default_10"
+      android:layout_margin="@dimen/dp_default_5"
+        >
+        <TextView 
+            android:id="@+id/tv_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            
+            android:textSize="@dimen/sp_default_20"
+            android:textColor="#999999"
+            />
+        <TextView 
+            android:id="@+id/tv_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           
+              android:textSize="@dimen/sp_default_20"
+              android:layout_marginTop="@dimen/dp_default_10"
+               android:textColor="#999999"
+            />
+        <TextView 
+            android:id="@+id/tv_denomination"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+         
+              android:textSize="@dimen/sp_default_20"
+                      android:layout_marginTop="@dimen/dp_default_10"
+                       android:textColor="#999999"
+            />
+        
+    </LinearLayout>
+	<TextView 
+	    android:id="@+id/tv_payStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            
+            android:textSize="@dimen/sp_default_20"
+           
+            android:layout_marginLeft="@dimen/dp_default_5"
+       		 android:layout_marginRight="@dimen/dp_default_5"
+         android:paddingTop="@dimen/dp_default_15"
+        android:paddingLeft="@dimen/dp_default_10"
+        android:text="请选择支付方式"
+        android:paddingRight="@dimen/dp_default_10"
+        android:paddingBottom="@dimen/dp_default_15"
+        android:textColor="#999999"
+    	
+            />
+	
+	<ListView
+        android:id="@+id/payment_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:dividerHeight="@dimen/dp_default_2"
+        android:minHeight="@dimen/dp_default_100"
+        android:divider="@color/transparent"
+        android:scrollbars="none"
+        android:headerDividersEnabled="true"
+        android:layout_marginLeft="@dimen/dp_default_5"
+        android:layout_marginRight="@dimen/dp_default_5"
+        android:layout_marginTop="@dimen/dp_default_10"
+        >
+</ListView>
+	<View style="@style/WeiWeiContentBorderStyle"/>
+	<RelativeLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="@dimen/dp_default_60"
+	    android:background="@color/white"
+	    >
+        <TextView 
+            android:id="@+id/tv_SurplusMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="应付金额:￥99.7"
+              android:textSize="@dimen/sp_default_20"
+                      android:layout_centerVertical="true"
+                       android:textColor="#999999"
+                       android:layout_marginLeft="@dimen/dp_default_15"
+            />
+	    <Button 
+	   android:id="@+id/bt"
+	   android:layout_gravity="bottom"
+	   android:layout_width="wrap_content"
+	   android:layout_height="wrap_content"
+	   android:text="去支付"
+	   android:textSize="@dimen/sp_default_20"
+	   android:padding="@dimen/dp_default_10"
+	   android:textColor="@color/white"
+	   android:layout_alignParentRight="true"
+	   android:layout_centerVertical="true"
+	   android:layout_marginRight="@dimen/dp_default_10"
+	   android:background="@drawable/weiwei_yellow_button"
+	    />
+	</RelativeLayout>
+	
+</LinearLayout>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools" style="@style/WeiWeiBaseBackgroundStyle"
+              android:orientation="vertical">
+    <LinearLayout
+            android:id="@+id/home_title"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/search_header_height"
+            android:layout_alignParentTop="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:background="@drawable/homeserach_bg">
+
+        <ImageView
+                android:id="@+id/home_top_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="@dimen/home_header_logo_margin"
+                android:src="@drawable/home_logo"/>
+
+        <EditText
+                android:id="@+id/home_search_edit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/home_header_edittext_margin"
+                android:layout_weight="1"
+                android:background="@drawable/border_select_edittext"
+                android:drawableLeft="@drawable/home_search"
+				android:singleLine="true"
+                android:text="@string/home_header_edittext_hint_text"
+                android:padding="@dimen/home_header_edittext_padding"
+                android:textColor="@color/white"
+                android:focusable="false"
+                android:textSize="@dimen/home_header_edittext_textsize"/>
+
+        <ImageButton
+                android:id="@+id/home_scan"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/home_header_camera_margin"
+                android:paddingLeft="@dimen/home_header_camera_paddingleft"
+                android:paddingRight="@dimen/home_header_camera_paddingright"
+                android:background="@drawable/erweima"/>
+
+
+    </LinearLayout>
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_default_1"
+            android:background="@color/weiwei_content_border_color"/>
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/dp_default_10">
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_default_1"
+                android:background="@color/weiwei_content_border_color"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <ListView
+                    android:id="@+id/lv"
+                    android:layout_width="@dimen/category_left_list_width"
+                    android:layout_height="match_parent"
+                    android:scrollbars="none"
+                    android:background="@color/left_list_content_color"
+                    android:divider="@color/weiwei_content_item_divider_color"
+                    android:dividerHeight="@dimen/dp_default_1">
+            </ListView>
+
+
+            <fragment
+                    android:id="@+id/classify_second_fragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:name="com.dongwukj.weiwei.ui.fragment.ClassifySecondFragment"
+                      tools:layout="@layout/classify_second_fragment"/>
+            <!--<LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/weiwei_content_background_color"
+                    android:paddingTop="15dp"
+                    android:paddingLeft="22dp"
+                    android:paddingRight="22dp">
+                <com.handmark.pulltorefresh.library.PullToRefreshListView
+                        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/left_lv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:listSelector="@color/weiwei_content_background_color"
+                        android:background="@color/weiwei_content_background_color"
+                        android:overScrollMode="never"
+                        android:fadingEdge="none"
+                        android:scrollbars="none"
+                        android:cacheColorHint="@color/weiwei_content_background_color"
+                        ptr:ptrMode="disabled"
+                        />
+            </LinearLayout>-->
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

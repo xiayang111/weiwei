@@ -1,0 +1,70 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/recommended_list_item_height"
+    android:minHeight="@dimen/recommended_list_item_height"
+    android:background="@drawable/weiwei_recommend_gridview_item"
+    android:orientation="vertical" 
+    android:descendantFocusability="blocksDescendants" >
+
+    <ImageView
+        android:id="@+id/iv_product"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/recommend_item_image_height"
+        android:src="@drawable/default_small" 
+        android:scaleType="fitXY"
+        android:padding="@dimen/recommend_item_image_padding"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/pro_name"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+           
+            android:layout_marginLeft="@dimen/recommend_item_marginleft"
+            android:lines="1"
+            android:ellipsize="end"
+           android:textSize="@dimen/recommend_item_title_size" />
+	<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center|left"
+            android:layout_marginLeft="@dimen/recommend_item_marginleft" 
+            android:layout_marginBottom="@dimen/recommend_item_marginbottom">
+
+           <TextView
+                android:id="@+id/pro_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               
+                android:textColor="@color/red"
+                android:singleLine="true"
+                android:layout_marginRight="20dp" />
+			<TextView
+                android:id="@+id/old_price"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+               
+                 android:singleLine="true"
+                android:textColor="@color/darkgray" />
+            <TextView
+                android:id="@+id/tv_buy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/recommend_item_marginRight"
+                android:text="@string/recommend_item_buy"
+                android:gravity="center"
+                android:focusable="false"
+                style="@style/WeiWeiBaseYellowButtonStyle"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

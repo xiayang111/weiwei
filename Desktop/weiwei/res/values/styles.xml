@@ -1,0 +1,334 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="WeiWeiActivityHeader">
+        
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_marginRight">@dimen/dp_default_10</item>
+        <item name="android:layout_alignParentRight">true</item> 
+        <item name="android:layout_centerVertical">true</item> 
+        <item name="android:textColor">@color/weiwei_header_right_color</item>
+        <item name="android:background">@color/transparent</item>
+     
+    </style>
+    
+    <style name="HomeBottomRadio">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">@dimen/dp_default_5</item>
+        <item name="android:textSize">@dimen/sp_default_10</item>
+    </style>
+    
+          <style name="popwindow_delete_btn_anim_style">
+        <item name="android:windowEnterAnimation">@anim/delete_btn_show</item>
+ <!-- 指定显示的动画xml -->
+        <item name="android:windowExitAnimation">@anim/delete_btn_hide</item>
+ <!-- 指定消失的动画xml -->
+ </style>
+    <style name="CartDeleteButtonStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:text">@string/cart_delete_button_text</item>
+        <item name="android:background">@drawable/d_delete_btn</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:paddingLeft">@dimen/cart_delete_button_paddingleft</item>
+        <item name="android:paddingRight">@dimen/cart_delete_button_paddingright</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginRight">@dimen/cart_delete_button_marginright</item>
+    </style>
+    <style name="HomeListItemTitleStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/home_list_item_title_textsize</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginLeft">@dimen/home_list_item_title_margin</item>
+        <item name="android:layout_marginTop">@dimen/home_list_item_title_margin</item>
+        <item name="android:layout_marginBottom">@dimen/home_list_item_title_margin</item>
+    </style>
+    <style name="HomeListItemDescriptionStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center|left</item>
+        <item name="android:layout_marginLeft">@dimen/home_list_item_title_margin</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:lines">3</item>
+        <item name="android:layout_marginBottom">@dimen/home_list_item_title_margin</item>
+    </style>
+    <style name="HomeListItemPriceContentStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/home_list_item_title_margin</item>
+        <item name="android:layout_marginLeft">@dimen/home_list_item_title_margin</item>
+    </style>
+    <style name="Dialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowFrame">@null</item><!--边框-->
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item> <!--是否启用标题栏-->
+        <item name="android:backgroundDimEnabled">true</item> <!--是否使用背景半透明-->
+    </style>
+
+    <!-- 展示 商品SKU 属性时的淡入淡出效果动画-->
+    <style name="item_sku_animation">
+        <item name="android:windowEnterAnimation">@anim/slide_in_from_bottom</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_to_bottom</item>
+    </style>
+
+
+    <style name="app_title_left_button_style">
+        <item name="android:layout_gravity">left|center</item>
+        <item name="android:paddingLeft">@dimen/app_title_icon_padding_left_top_bottom</item>
+        <item name="android:paddingTop">@dimen/app_title_icon_padding_left_top_bottom</item>
+        <item name="android:paddingRight">@dimen/app_title_icon_padding_right</item>
+        <item name="android:paddingBottom">@dimen/app_title_icon_padding_left_top_bottom</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:src">@drawable/ic_launcher</item>
+        <item name="android:scaleType">centerInside</item>
+    </style>
+    <style name="title_bar_bg_style">
+        <item name="android:background">@drawable/ic_launcher</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">@dimen/vipnew_header_height</item>
+    </style>
+
+    <style name="submit_red_big_button_style">
+        <item name="android:textSize">@dimen/order_submit_red_big_text</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/btn_violet_bg</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/submit_red_big_button_height</item>
+    </style>
+
+    <style name="submit_red_small_button_style">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/submit_red_small_button</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/submit_red_small_button_height</item>
+    </style>
+
+    <!--<style name="main_style">
+        <item name="android:layout_marginLeft">@dimen/main_margin_left_right</item>
+        <item name="android:layout_marginRight">@dimen/main_margin_left_right</item>
+        <item name="android:background">@color/background_color</item>
+    </style>-->
+	
+	<style name="roomRatingBar" parent="@android:style/Widget.RatingBar">
+		<item name="android:progressDrawable">@drawable/room_rating_bar</item>
+        <item name="android:minHeight">@dimen/dp_default_30</item>
+        <item name="android:maxHeight">@dimen/dp_default_60</item>
+	</style>
+
+
+    <style name="MainTabBottomRadioStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:button">@null</item>
+        <item name="android:textColor">@color/tab_bottom_radio_text_color</item>
+        <item name="android:textSize">@dimen/sp_default_13</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+
+
+    <!--更多样式-->
+    <style name="WeiWeiBaseMoreButtonStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/weiwei_more</item>
+    </style>
+    <style name="WeiWeiRelativeMoreButtonStyle" parent="WeiWeiBaseMoreButtonStyle">
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_marginRight">@dimen/dp_default_8</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+    <style name="WeiWeiLinearMoreButtonStyle" parent="WeiWeiBaseMoreButtonStyle">
+
+    </style>
+
+    <!--可点击按钮样式-->
+    <style name="WeiWeiBaseYellowButtonStyle">
+        <item name="android:background">@drawable/add_cart_button_selector</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_height">@dimen/dp_default_45</item>
+    </style>
+
+    <!-- 黄色背景,白色文字按钮 样式 -->
+    <style name="WeiWeiBYellowButtonStyle">
+        <item name="android:background">@drawable/weiwei_yellow_button</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_height">@dimen/dp_default_40</item>
+    </style>
+    
+    <style name="WeiWeiBaseYellowButtonStyle.Big">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dp_default_50</item>
+        <item name="android:layout_marginLeft">@dimen/dp_default_20</item>
+        <item name="android:layout_marginRight">@dimen/dp_default_20</item>
+        <item name="android:textSize">@dimen/sp_default_20</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="WeiWeiBaseYellowButtonStyle.Big.Relative">
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_marginBottom">@dimen/dp_default_20</item>
+    </style>
+
+    <!--主背景样式-->
+    <style name="WeiWeiBaseBackgroundStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">#f0f0f0</item>
+    </style>
+    <!--内容样式-->
+    <style name="WeiWeiContentBackgroundStyle">
+        <item name="android:background">@color/weiwei_content_background_color</item>
+        <item name="android:layout_marginTop">@dimen/dp_default_10</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="WeiWeiContentBorderStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/px_default_1</item>
+        <item name="android:background">@color/weiwei_content_border_color</item>
+    </style>
+      <style name="WeiWeiContentBorderStyleNew">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/px_default_1</item>
+        <item name="android:background">#f0f0f0</item>
+    </style>
+        <style name="WeiWeiContentBorderStyle_10">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dp_default_10</item>
+        <item name="android:background">@color/weiwei_content_border_color</item>
+    </style>
+
+    <style name="WeiWeiAddressLinear">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="WeiWeiAddressBase">
+        <item name="android:layout_height">@dimen/dp_default_60</item>
+    </style>
+    <style name="WeiWeiAddressBase.Text">
+        <item name="android:layout_width">@dimen/dp_default_100</item>
+        <item name="android:textColor">@color/black</item>
+        <!-- <item name="android:textStyle">bold</item> -->
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/newaddresstextsize</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+    <style name="WeiWeiAddressBase.Edit">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">@dimen/sp_default_18</item>
+        <item name="android:textColor">@color/gray_button_text_color</item>
+    </style>
+
+    <style name="WeiWeiHeaderBarBaseStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dp_default_60</item>
+        <item name="android:background">#8fc31f</item>
+    </style>
+    <style name="WeiWeiHeaderBarBaseStyle_Title">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+       <!--  <item name="android:textStyle">bold</item> -->
+        <item name="android:textSize">@dimen/sp_default_20</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="WeiWeiHeaderBarBaseStyle_Left">
+        <item name="android:layout_width">@dimen/dp_default_20</item>
+        <item name="android:layout_height">@dimen/dp_default_20</item>
+        <item name="android:src">@drawable/weiwei_top_back_button_white</item>
+      <!--   <item name="android:layout_alignParentLeft">true</item> -->
+       <!--  <item name="android:layout_marginLeft">@dimen/dp_default_10</item> -->
+    
+         
+        <item name="android:layout_centerVertical">true</item> 
+        <item name="android:background">@color/transparent</item>
+        
+    </style>
+
+    <style name="WeiWeiHeaderBarBaseStyle_Right">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_marginRight">@dimen/dp_default_10</item>
+        <item name="android:layout_alignParentRight">true</item> 
+        <item name="android:layout_centerVertical">true</item> 
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@color/transparent</item>
+    </style>
+    <style name="WeiWeiHeaderBarBaseStyle_Right_gonggong">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_centerVertical">true</item> 
+        <item name="android:textColor">@color/weiwei_header_right_color</item>
+        <item name="android:background">@color/transparent</item>
+    </style>
+
+    <style name="WeiWeiOrderListRadio" parent="HomeBottomRadio">
+        <item name="android:textSize">@dimen/sp_default_16</item>
+    </style>
+
+    <style name="WeiWeiCenterLinearItemStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dp_default_53</item>
+        <item name="android:background">@android:color/white</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+	  <style name="WeiWeiCenterLinearItemStyleNew">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dp_default_53</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="WeiWeiBaseRedPrice">
+        <item name="android:textSize">@dimen/sp_default_16</item>
+        <item name="android:textColor">@color/weiwei_gouwuche_red_price</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="WeiWeiSwitchCheckBoxStyle">
+        <item name="android:button">@null</item>
+        <item name="android:background">@drawable/weiwei_seletor_setting_check</item>
+    </style>
+</resources>

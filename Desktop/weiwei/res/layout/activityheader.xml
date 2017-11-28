@@ -1,0 +1,33 @@
+ <RelativeLayout
+     	xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_default_50" >
+
+    
+        <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="注 册"
+                android:textStyle="bold"
+                android:textSize="@dimen/sp_default_20"
+                />
+    
+    <LinearLayout
+        android:id="@+id/ll_left"
+        android:layout_width="@dimen/dp_default_40"
+        android:layout_height="@dimen/dp_default_40"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dp_default_10"
+        android:gravity="center" >
+
+        <ImageButton
+            android:id="@+id/list_header_leftbutton"
+              android:layout_width="@dimen/dp_default_20"
+            android:layout_height="@dimen/dp_default_20"
+            android:src="@drawable/weiwei_top_back_button"
+            android:background="@color/transparent"
+            android:layout_gravity="center_vertical"/>
+    </LinearLayout>
+    </RelativeLayout>

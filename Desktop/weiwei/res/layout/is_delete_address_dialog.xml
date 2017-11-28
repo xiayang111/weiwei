@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/dp_default_252"
+    android:layout_height="@dimen/dp_default_70"
+    android:orientation="vertical" 
+    android:background="@drawable/weiwei_dialog_backgroud"
+    >
+    
+
+        <TextView 
+            android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="是/否删除当前地址?"
+        android:textStyle="normal"
+        android:textSize="@dimen/sp_default_18"
+        android:textColor="@color/left_category_text_color"
+        android:gravity="center"
+        />
+
+<View style="@style/WeiWeiContentBorderStyle" />
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.75"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+    <TextView 
+        android:id="@+id/tv_ok"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="确定"
+        android:gravity="center"
+        android:textSize="@dimen/sp_default_16"
+        android:textColor="@color/dialog_queren"
+        />
+    
+            <TextView
+            android:layout_width="@dimen/dp_default_1"
+            android:layout_height="match_parent"
+            android:background="@color/weiwei_content_border_color" />
+    
+    <TextView 
+        android:id="@+id/tv_cancel"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:text="取消"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:textSize="@dimen/sp_default_16"
+        android:textColor="@color/dialog_queren"
+        />
+        
+    </LinearLayout>
+
+
+</LinearLayout>

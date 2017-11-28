@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <ImageView
+            android:id="@+id/home_list_item_icon"
+            android:layout_width="@dimen/home_list_item_icon_width"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_launcher"/>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+        <TextView
+                android:id="@+id/home_list_item_title"
+                android:text="标题"
+                style="@style/HomeListItemTitleStyle"
+                />
+        <TextView
+                android:id="@+id/home_list_item_description"
+                android:text="dssdsdsfsdfsdf"
+                style="@style/HomeListItemDescriptionStyle"/>
+
+        <LinearLayout
+                android:id="@+id/home_list_item_price_content"
+                style="@style/HomeListItemPriceContentStyle"
+                >
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="match_parent"
+                      android:text="@string/renmingbi_string"/>
+            <TextView
+                    android:id="@+id/home_list_item_current_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="88.0"
+                    android:textColor="@color/red"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/sp_default_18"/>
+
+            <TextView
+                    android:id="@+id/home_list_item_pre_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dp_default_10"
+                    android:text="￥99.0"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

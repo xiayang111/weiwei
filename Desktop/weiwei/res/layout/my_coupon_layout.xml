@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/WeiWeiBaseBackgroundStyle"
+    android:orientation="vertical" >
+
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_default_40" 
+        >
+
+        <RadioGroup
+            android:id="@+id/coupon_radio"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="@dimen/dp_default_5"
+            android:layout_marginRight="@dimen/dp_default_5"
+            android:layout_marginTop="@dimen/dp_default_5"
+            android:background="@color/left_list_content_color"
+            android:orientation="horizontal" >
+
+        
+
+            <RadioButton
+                android:id="@+id/rd_already"
+                style="@style/WeiWeiOrderListRadio"
+                android:textColor="@color/message_title_radio_text_color"
+                  android:background="@drawable/order_tab_seletor_one"
+                android:checked="true"
+                android:text="已领取" />
+
+            <RadioButton
+                android:id="@+id/rd_out_date"
+                style="@style/WeiWeiOrderListRadio"
+                android:textColor="@color/message_title_radio_text_color"
+                  android:background="@drawable/order_tab_seletor_three"
+                android:checked="false"
+                android:text="已过期" />
+        </RadioGroup>
+
+    </RelativeLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="@dimen/dp_default_1"
+            android:background="@color/weiwei_content_border_color" android:visibility="gone"/>
+    
+    	<FrameLayout 
+	    android:id="@+id/fl_coupon"
+	    android:layout_width="match_parent"
+	    android:layout_height="0dp"
+	    android:layout_weight="1"
+        android:background="@color/weiwei_background_color"
+	    />
+    
+
+</LinearLayout>

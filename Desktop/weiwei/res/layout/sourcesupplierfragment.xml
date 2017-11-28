@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView 
+      android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     
+    >
+<LinearLayout 
+    style="@style/WeiWeiBaseBackgroundStyle"
+    android:orientation="vertical" >
+
+    <View
+       android:layout_width="match_parent"
+       android:layout_height="10dp"
+       android:background="@color/white" />
+	<View style="@style/WeiWeiContentBorderStyle"/>
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="60dp"
+	    android:orientation="horizontal"
+	    >
+	    <TextView 
+	        android:layout_width="wrap_content"
+	        android:layout_height="match_parent"
+	        android:textSize="18sp"
+	        android:gravity="center_vertical|right"
+	        android:text="供应商名称:"
+	       
+	        android:minEms="6"/>
+	    <TextView 
+	        android:layout_width="wrap_content"
+	        android:layout_height="match_parent"
+	        android:textSize="18sp"
+	        android:gravity="center_vertical"
+	        android:text=" 白沙洲批发市场"/>
+	</LinearLayout>
+	<View style="@style/WeiWeiContentBorderStyle"/>
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="60dp"
+	    android:orientation="horizontal"
+	    >
+	    <TextView 
+	        android:layout_width="wrap_content"
+	        android:layout_height="match_parent"
+	        android:textSize="18sp"
+	        android:gravity="center_vertical|right"
+	        android:text="资质名称:"
+	       
+	        android:minEms="6"/>
+	    <TextView 
+	        android:layout_width="wrap_content"
+	        android:layout_height="match_parent"
+	        android:textSize="18sp"
+	        android:gravity="center_vertical"
+	        android:text=" 绿色食品"/>
+	</LinearLayout>
+	<View style="@style/WeiWeiContentBorderStyle"/>
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="60dp"
+	    android:orientation="horizontal"
+	    >
+	    <TextView 
+	        android:layout_width="wrap_content"
+	        android:layout_height="match_parent"
+	        android:textSize="18sp"
+	        android:gravity="center_vertical|right"
+	        android:text="发证时间:"
+	       
+	        android:minEms="6"/>
+	    <TextView 
+	        android:layout_width="wrap_content"
+	        android:layout_height="match_parent"
+	        android:textSize="18sp"
+	        android:gravity="center_vertical"
+	        android:text=" 2015-06-01"/>
+	</LinearLayout>
+	<View style="@style/WeiWeiContentBorderStyle"/>
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="60dp"
+	    android:orientation="horizontal"
+	    >
+	    <TextView 
+	        android:layout_width="wrap_content"
+	        android:layout_height="match_parent"
+	        android:textSize="18sp"
+	        android:gravity="center_vertical|right"
+	        android:text="发证单位:"
+	       
+	        android:minEms="6"/>
+	    <TextView 
+	        android:layout_width="wrap_content"
+	        android:layout_height="match_parent"
+	        android:textSize="18sp"
+	        android:gravity="center_vertical"
+	        android:text=" 湖北实药监"/>
+	</LinearLayout>
+	<View style="@style/WeiWeiContentBorderStyle"/>
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="0dp"
+	    android:layout_weight="1"
+	    android:background="@color/white"
+	    android:gravity="center_horizontal"
+	    >
+	    <ImageView android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	       	android:layout_marginTop="20dp"
+	        android:src="@drawable/hegezheng"/>
+	</LinearLayout>
+</LinearLayout>
+</ScrollView>

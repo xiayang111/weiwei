@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.dongwukj.weiwei.ui.widget.ProductDetailView android:id="@+id/main_layout" android:layout_width="fill_parent"
+                                                  android:layout_height="wrap_content"
+                                                  xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--<include android:id="@+id/product_header_layout" layout="@layout/product_detail_header"/>-->
+    <LinearLayout android:orientation="horizontal" android:id="@+id/product_header_layout" android:layout_width="match_parent" android:layout_height="0dp" android:visibility="gone">
+        <include  layout="@layout/product_detail_header"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/product_foot_layout"
+                  android:background="@drawable/bottom_bar_bg" android:layout_width="fill_parent"
+                  android:layout_height="wrap_content" android:layout_alignParentBottom="true"/>
+    <include android:id="@+id/detail_framework" android:layout_width="fill_parent" android:layout_height="fill_parent"
+             android:layout_above="@id/product_foot_layout" android:layout_below="@id/product_header_layout"
+             layout="@layout/product_detail_content"/>
+    <com.dongwukj.weiwei.ui.widget.DetailScrollTopIndicator android:gravity="top|center" android:id="@+id/top_indicator"
+                                                             android:visibility="gone"
+                                                             android:layout_width="fill_parent"
+                                                             android:layout_height="wrap_content"
+                                                             android:layout_marginTop="16.0dip"
+                                                             android:layout_below="@id/product_header_layout"
+                                                             android:layout_centerHorizontal="true"/>
+    <com.dongwukj.weiwei.ui.widget.DetailScrollBottomIndicator android:gravity="bottom|center"
+                                                                android:id="@+id/bottom_indicator"
+                                                                android:visibility="gone"
+                                                                android:layout_width="fill_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:layout_marginBottom="18.0dip"
+                                                                android:layout_above="@id/product_foot_layout"/>
+    <include android:layout_width="166.0dip" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip"
+             android:layout_above="@id/product_foot_layout" layout="@layout/new_product_detail_cart_animation_dialog"/>
+    <View android:id="@+id/go_top" android:background="@drawable/go_top_selector" android:visibility="invisible"
+          android:layout_width="43.0dip" android:layout_height="43.0dip" android:layout_marginRight="12.0dip"
+          android:layout_marginBottom="11.0dip" android:layout_above="@id/product_foot_layout"
+          android:layout_alignParentRight="true"/>
+    <include android:id="@+id/faush_layout" android:visibility="gone" android:layout_width="fill_parent"
+             android:layout_height="fill_parent" android:layout_below="@id/product_header_layout"
+             android:layout_alignParentLeft="true" layout="@layout/new_load_fail"/>
+    <ImageView android:id="@+id/ivRedPop" android:visibility="invisible" android:layout_width="13.0dip"
+               android:layout_height="13.0dip" android:src="@drawable/bg_shoppingcar_small"/>
+</com.dongwukj.weiwei.ui.widget.ProductDetailView>

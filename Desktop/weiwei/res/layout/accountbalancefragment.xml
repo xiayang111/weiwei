@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   style="@style/WeiWeiBaseBackgroundStyle"
+    android:orientation="vertical" >
+  
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/weiwei_base_text_bg"
+        android:paddingTop="@dimen/dp_default_10"
+        android:paddingLeft="@dimen/dp_default_10"
+        android:paddingBottom="@dimen/dp_default_10"
+        android:layout_margin="@dimen/dp_default_5"
+        >
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp_default_16"
+            android:textColor="#7c7c7c"
+            android:text="您当前的账户余额为"/>
+         <TextView
+             android:id="@+id/yue"
+              android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp_default_16"
+            android:textColor="@color/red"
+            android:text="     "/>
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp_default_16"
+            android:textColor="#7c7c7c"
+            android:text="元"/>
+    </LinearLayout>
+ 	<LinearLayout 
+ 	    android:layout_width="match_parent"
+ 	    android:layout_height="match_parent"
+ 	    android:orientation="vertical"
+ 	    android:background="@drawable/weiwei_base_text_bg"
+ 	    android:layout_marginLeft="@dimen/dp_default_5"
+ 	    android:layout_marginRight="@dimen/dp_default_5"
+ 	    android:layout_marginTop="@dimen/dp_default_5"
+ 	    android:layout_marginBottom="@dimen/dp_default_10"
+ 	    android:paddingBottom="@dimen/dp_default_5"
+ 	    >
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+       
+        android:paddingTop="@dimen/dp_default_10"
+        android:paddingBottom="@dimen/dp_default_10"
+        
+        >
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp_default_16"
+            android:textColor="@color/black"
+            android:paddingLeft="@dimen/dp_default_10"
+            android:text="交易记录"/>
+        
+    </LinearLayout>
+ 	<View style="@style/WeiWeiContentBorderStyleNew"/>
+ 	
+ 	<com.handmark.pulltorefresh.library.PullToRefreshListView 
+ 	    android:layout_width="match_parent"
+ 	    android:layout_height="match_parent"
+ 	    android:id="@+id/lv"
+ 	    android:divider="@color/weiwei_content_border_color"
+ 	    android:dividerHeight="@dimen/px_default_1"
+ 	    
+ 	    android:background="@color/white"
+ 	    android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+ 	    ></com.handmark.pulltorefresh.library.PullToRefreshListView>
+ 	</LinearLayout>
+</LinearLayout>
+

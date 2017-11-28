@@ -1,0 +1,50 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/bottom"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+        >
+    <!-- 底部导航 -->
+    <RadioGroup
+            android:id="@+id/main_radio"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/home_bottom_radio_height"
+            android:layout_gravity="bottom"
+            android:orientation="horizontal"
+            >
+        <RadioButton
+                android:id="@+id/rd_home"
+                android:text="@string/home_radio_text_home"
+                style="@style/HomeBottomRadio"
+                android:background="@drawable/home_bottom_radio_selector"
+                android:checked="true"
+
+                />
+        <RadioButton
+                android:id="@+id/rd_sort"
+                android:text="@string/home_radio_text_category"
+                style="@style/HomeBottomRadio"
+                android:background="@drawable/home_bottom_radio_selector"
+                />
+        <RadioButton
+                android:id="@+id/rd_weiwei"
+                android:text="@string/home_radio_text_weiwei"
+                style="@style/HomeBottomRadio"
+                android:background="@drawable/home_bottom_radio_selector"
+                />
+        <RadioButton
+                android:id="@+id/rd_cart"
+                android:text="@string/home_radio_text_cart"
+                style="@style/HomeBottomRadio"
+                android:background="@drawable/home_bottom_radio_selector"
+                />
+        <RadioButton
+                android:id="@+id/rd_combo"
+                style="@style/HomeBottomRadio"
+                android:text="@string/home_radio_text_taocan"
+                android:background="@drawable/home_bottom_radio_selector"
+                />
+    </RadioGroup>
+
+</RelativeLayout>

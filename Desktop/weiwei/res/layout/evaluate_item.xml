@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:orientation="vertical" 
+   >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:gravity="center_vertical" 
+        android:paddingRight="5dp"
+        android:paddingTop="5dp"
+                android:paddingLeft="10dp"
+        >
+
+        <ImageView
+            android:id="@+id/iv_user"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/weiwei_unlogin_icon"/>
+
+        <TextView
+            android:id="@+id/tv_pname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/iv_user"
+          />
+
+        <TextView
+            android:id="@+id/tv_reviewtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+           />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1" 
+                android:paddingLeft="10dp"
+        android:paddingRight="5dp"
+        >
+
+        <TextView
+            android:id="@+id/tv_star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="用户评分:" />
+
+        <RatingBar
+            android:id="@+id/rb_star"
+            style="@style/roomRatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_toRightOf="@id/tv_star"
+            android:layout_marginLeft="5dp"
+           android:isIndicator="true"
+           android:numStars="5"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_review"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="2"
+        android:paddingLeft="10dp"
+        android:paddingRight="5dp"
+         />
+    
+    <View style="@style/WeiWeiContentBorderStyle" android:layout_marginLeft="10dp" />
+
+</LinearLayout>

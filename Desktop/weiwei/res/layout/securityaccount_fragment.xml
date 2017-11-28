@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/WeiWeiBaseBackgroundStyle"
+    android:orientation="vertical" >
+
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_default_5"
+        android:orientation="vertical"
+        android:background="@drawable/weiwei_base_text_bg"
+        >
+	
+    <RelativeLayout
+        android:id="@+id/boundtel"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_default_50"
+       
+        >
+        <ImageView 
+            android:id="@+id/img1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bangdingshouji"
+            android:layout_centerVertical="true"
+             android:layout_marginLeft="@dimen/dp_default_10"
+            />
+        <TextView 
+            android:layout_toRightOf="@id/img1"
+            android:id="@+id/tv_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp_default_20"
+            android:textColor="#262626"
+            android:text="绑定手机"
+            android:layout_marginLeft="@dimen/dp_default_10"
+            android:layout_centerVertical="true"
+            />
+        <ImageButton 
+            android:id="@+id/bt"
+             android:layout_width="wrap_content"
+             android:layout_height="match_parent"
+             android:src="@drawable/weiwei_more"
+             android:background="@null"
+             android:layout_alignParentRight="true"
+             android:layout_marginRight="@dimen/dp_default_10"
+             android:visibility="invisible"
+             />
+         <TextView 
+            android:id="@+id/tv_tel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp_default_20"
+            android:textColor="#999999"
+            android:layout_marginRight="@dimen/dp_default_10"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/bt"
+            />
+    </RelativeLayout>
+
+    <View style="@style/WeiWeiContentBorderStyleNew" />
+
+    <RelativeLayout
+        android:id="@+id/modify_loginpassword"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_default_50"
+        
+        >
+         
+         <ImageView 
+            android:id="@+id/img2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/xiugaidenglumima"
+            android:layout_centerVertical="true"
+             android:layout_marginLeft="@dimen/dp_default_10"
+            />
+         <TextView 
+              android:layout_toRightOf="@id/img2"
+            android:id="@+id/tv_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp_default_20"
+            android:textColor="#262626"
+            android:text="修改登录密码"
+            android:layout_marginLeft="@dimen/dp_default_10"
+             android:layout_centerVertical="true"
+            />
+         <ImageButton 
+             android:layout_width="wrap_content"
+             android:layout_height="match_parent"
+             android:src="@drawable/weiwei_more"
+             android:background="@null"
+             android:layout_alignParentRight="true"
+             android:layout_marginRight="@dimen/dp_default_10"
+             />
+    </RelativeLayout>
+
+    <View style="@style/WeiWeiContentBorderStyleNew" />
+
+    <RelativeLayout
+        android:id="@+id/modify_paypassword"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_default_50"
+       
+       
+       >
+         <ImageView 
+            android:id="@+id/img3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/xiugaizhifumima"
+            android:layout_centerVertical="true"
+             android:layout_marginLeft="@dimen/dp_default_10"
+            />
+         <TextView 
+              android:layout_toRightOf="@id/img3"
+            android:id="@+id/tv_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp_default_20"
+            android:textColor="#262626"
+            android:text="修改支付密码"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_default_10"
+            />
+         <ImageButton 
+             android:layout_width="wrap_content"
+             android:layout_height="match_parent"
+             android:src="@drawable/weiwei_more"
+             android:background="@null"
+             android:layout_alignParentRight="true"
+             android:layout_marginRight="@dimen/dp_default_10"
+             />
+    </RelativeLayout>
+</LinearLayout>
+
+
+</LinearLayout>

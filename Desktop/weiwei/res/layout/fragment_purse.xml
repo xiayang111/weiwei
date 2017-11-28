@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/WeiWeiBaseBackgroundStyle"
+    android:orientation="vertical" >
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginLeft="@dimen/dp_default_5"
+        android:layout_marginRight="@dimen/dp_default_5" 
+        android:layout_marginTop="@dimen/dp_default_10"
+        android:background="@drawable/weiwei_base_text_bg"
+        android:orientation="vertical"
+	    >
+  
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dp_default_40"
+        android:orientation="horizontal"
+        >
+
+        <ImageView
+            android:layout_width="@dimen/dp_default_1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/weiwei_my_weiwei_yue" />
+
+        <RelativeLayout
+            android:id="@+id/rl_yue"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="6" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentLeft="true"
+                android:gravity="center_vertical"
+                android:text="@string/purse_balance"
+                android:textSize="@dimen/sp_default_15"
+                android:textColor="@color/left_category_text_color" />
+
+            <TextView
+                android:id="@+id/tv_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="@dimen/dp_default_10"
+                android:layout_toLeftOf="@+id/img_back"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/sp_default_15"
+             
+                android:textColor="@color/gray_button_text_color" />
+
+            <ImageView
+                android:id="@id/img_back"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/dp_default_20"
+                android:src="@drawable/back" 
+                android:visibility="visible"/>
+
+           
+        </RelativeLayout>
+    </LinearLayout>
+ <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/dp_default_0.5"
+                android:layout_alignParentBottom="true"
+                android:background="#f0f0f0" />
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dp_default_40"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="@dimen/dp_default_1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/weiwei_my_weiwei_coupon" />
+
+        <RelativeLayout
+            android:id="@+id/rl_coupon"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="6" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentLeft="true"
+                android:gravity="center_vertical"
+                android:text="@string/purse_coupon"
+                android:textSize="@dimen/sp_default_15"
+                android:textColor="@color/left_category_text_color" />
+
+            <TextView
+                android:id="@+id/tv_coupon"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="@dimen/dp_default_10"
+                android:layout_toLeftOf="@+id/img_back1"
+                android:gravity="center_vertical"
+                android:textColor="@color/gray_button_text_color" />
+
+            <ImageView
+                android:id="@id/img_back1"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/dp_default_20"
+                android:src="@drawable/back" />
+
+            
+        </RelativeLayout>
+    </LinearLayout>
+<View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/dp_default_0.5"
+                android:layout_alignParentBottom="true"
+                android:background="#f0f0f0" />
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dp_default_40"
+        android:background="@android:color/white"
+        android:orientation="horizontal" 
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="@dimen/dp_default_1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/weiwei_my_weiwei_integral" />
+
+        <RelativeLayout
+            android:id="@+id/rl_attention"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="6" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentLeft="true"
+                android:gravity="center_vertical"
+                android:text="@string/purse_integral"
+                android:textSize="@dimen/sp_default_15"
+                android:textColor="@color/left_category_text_color" />
+
+            <TextView
+                android:id="@+id/tv_integral"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="@dimen/dp_default_10"
+                android:layout_toLeftOf="@+id/img_back2"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/sp_default_15"
+                android:textColor="@color/gray_button_text_color" />
+
+            <ImageView
+                android:id="@id/img_back2"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/dp_default_20"
+                android:visibility="invisible"
+                android:src="@drawable/back" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/dp_default_0.5"
+                android:layout_alignParentBottom="true"
+                android:background="@android:color/darker_gray" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_recharge"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dp_default_40"
+        android:background="@android:color/white"
+        android:visibility="visible"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="@dimen/dp_default_1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/weiwei_my_weiwei_vip_card" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="6" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentLeft="true"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/sp_default_15"
+                android:text="充值中心"
+                android:textColor="@color/left_category_text_color" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/dp_default_20"
+                android:src="@drawable/back" />
+
+            <!--
+        <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/darker_gray" />
+            -->
+
+          
+        </RelativeLayout>
+    </LinearLayout>
+<View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/dp_default_0.5"
+                android:layout_alignParentBottom="true"
+                android:background="#f0f0f0" />
+    <LinearLayout
+        android:id="@+id/ll_safe_question"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dp_default_40"
+     
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/my_weiwei_pursesafe" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="6" >
+
+            <TextView
+                android:id="@+id/question"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentLeft="true"
+                android:gravity="center_vertical"
+                android:text="@string/safe_question"
+                android:textSize="@dimen/sp_default_15"
+                android:textColor="@color/left_category_text_color" />
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/dp_default_20"
+                android:src="@drawable/back" />
+
+<!--             <Button
+                android:id="@+id/resetpwd"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:layout_toLeftOf="@+id/back"
+                android:background="@drawable/weiwei_search_button"
+                android:gravity="center_vertical" /> -->
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
+</LinearLayout>

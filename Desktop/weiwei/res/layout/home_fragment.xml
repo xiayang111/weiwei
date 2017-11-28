@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/WeiWeiBaseBackgroundStyle"
+    android:orientation="vertical" 
+   
+    >
+
+    <LinearLayout
+        android:id="@+id/home_title"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/search_header_height"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/homeserach_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" 
+        android:addStatesFromChildren="true"
+   >
+
+        <TextView
+            android:id="@+id/tv_changeAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_default_30"
+            android:layout_marginLeft="@dimen/dp_default_10"
+            android:background="@drawable/button_bg1"
+            android:drawablePadding="@dimen/dp_default_2"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/dp_default_10"
+            android:paddingRight="@dimen/dp_default_10"
+             android:text="切换地址"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_default_18" />
+
+        <EditText
+            android:id="@+id/home_search_edit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/home_header_edittext_margin"
+            android:layout_weight="1"
+            android:background="@drawable/border_select_edittext"
+            android:drawableLeft="@drawable/home_search"
+            android:drawablePadding="@dimen/dp_default_10"
+            android:focusable="false"
+            android:paddingBottom="@dimen/home_header_edittext_padding"
+            android:paddingLeft="15dp"
+            android:paddingRight="@dimen/home_header_edittext_padding"
+            android:paddingTop="@dimen/home_header_edittext_padding"
+            android:text="@string/home_header_edittext_hint_text"
+            android:textColor="@color/white"
+            android:textSize="@dimen/home_header_edittext_textsize"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_address"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dp_default_5"
+            android:layout_weight="1"
+           android:gravity="center"
+           	android:singleLine="true"
+            android:textColor="@color/white"
+            android:focusable="true"
+    		android:marqueeRepeatLimit="marquee_forever"  
+             android:focusableInTouchMode="true" 
+			android:ellipsize="marquee"
+           android:visibility="gone"
+            android:textSize="@dimen/sp_default_18" />
+         <com.dongwukj.weiwei.ui.widget.JazzyViewPager
+            android:id="@+id/jazzy_pager"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dp_default_5"
+            android:layout_weight="1"
+           />
+
+        <LinearLayout
+            android:id="@+id/ll_search"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_default_30"
+            android:layout_marginRight="@dimen/dp_default_10"
+            android:background="@drawable/button_bg1"
+            android:paddingLeft="@dimen/dp_default_10"
+            android:paddingRight="@dimen/dp_default_10" >
+
+            <ImageView
+                android:id="@+id/search"
+                android:layout_width="@dimen/dp_default_20"
+                android:layout_height="@dimen/dp_default_20"
+                android:layout_gravity="center"
+                android:background="@drawable/search_new" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/home_scan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/home_header_camera_margin"
+            android:layout_marginLeft="@dimen/home_header_camera_margin_left"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="@dimen/home_header_camera_margin"
+            android:background="@drawable/home_erweima"
+            android:paddingLeft="@dimen/home_header_camera_paddingleft"
+            android:paddingRight="@dimen/home_header_camera_paddingright"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/home_pull"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/home_title"
+        android:cacheColorHint="#00000000"
+        android:divider="@color/transparent"
+        android:dividerHeight="0dp"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="false"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:scrollbars="none"
+        android:smoothScrollbar="true" >
+    </com.handmark.pulltorefresh.library.PullToRefreshListView>
+
+</RelativeLayout>

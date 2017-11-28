@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_default_250"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical" 
+        android:background="@drawable/paysuccess" >
+
+
+      
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:background="@color/white" >
+
+        <Button
+            android:id="@+id/bn_check_order"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dp_default_20"
+            android:background="@drawable/weiwei_button_orange_fill"
+            android:padding="@dimen/dp_default_10"
+            android:text="查看订单"
+            android:layout_marginLeft="@dimen/dp_default_20"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_default_16" />
+
+        <Button
+            android:id="@+id/bn_continue_buy"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="@dimen/dp_default_20"
+            android:background="@drawable/weiwei_button_green_fill"
+            android:padding="@dimen/dp_default_10"
+            android:text="继续购买"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_default_16" />
+    </LinearLayout>
+
+</LinearLayout>

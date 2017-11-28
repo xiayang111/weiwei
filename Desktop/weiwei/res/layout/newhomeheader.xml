@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    
+    android:orientation="vertical" >
+    
+	<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:id="@+id/fm_banner"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_default_160"
+                 >
+            </FrameLayout>
+
+            <HorizontalScrollView
+                android:id="@+id/hr_gd"
+              
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_default_100" >
+
+                <LinearLayout
+                    android:id="@+id/ll_classfy"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+                </LinearLayout>
+            </HorizontalScrollView>
+			<RelativeLayout 
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/dp_default_50"
+			    android:background="@color/white"
+			    >
+			    <TextView 
+			        android:id="@+id/tv_name"
+			        android:layout_width="wrap_content"
+			        android:layout_height="match_parent"
+			        android:text="今日推荐"
+			        android:layout_alignParentLeft="true"
+			        android:textSize="@dimen/sp_default_16"
+			        android:gravity="center_vertical"
+			        android:layout_marginLeft="@dimen/dp_default_5"
+			        />
+			    <TextView 
+				android:layout_toRightOf="@id/tv_name"
+			        android:layout_width="wrap_content"
+			        android:layout_height="match_parent"
+			        android:text="SALE"
+			      	 android:textColor="#7c7c7c"
+			        android:textSize="@dimen/sp_default_16"
+			        android:gravity="center_vertical"
+			        android:layout_marginLeft="@dimen/dp_default_5"
+			        
+			        />
+			</RelativeLayout >
+        </LinearLayout>
+</LinearLayout>

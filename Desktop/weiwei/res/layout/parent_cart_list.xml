@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              style="@style/WeiWeiBaseBackgroundStyle">
+    <RelativeLayout
+            style="@style/WeiWeiHeaderBarBaseStyle">
+        <TextView
+                android:text="购物车"
+                style="@style/WeiWeiHeaderBarBaseStyle_Title"/>
+        <Button
+                android:id="@+id/cart_edit_button"
+                android:tag="0"
+                android:text="编辑"
+                style="@style/WeiWeiHeaderBarBaseStyle_Right"
+                android:visibility="invisible"
+                android:background="@color/transparent"
+                />
+         <LinearLayout
+            android:id="@+id/ll_left"
+            android:layout_width="@dimen/dp_default_40"
+            android:layout_height="@dimen/dp_default_40"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_default_10"
+            android:gravity="center" 
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/list_header_leftbutton"
+                style="@style/WeiWeiHeaderBarBaseStyle_Left" />
+        </LinearLayout>
+    </RelativeLayout>
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_default_1"
+            android:background="@color/weiwei_content_border_color"/>
+
+
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/weiwei_background_color">
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                      android:orientation="vertical">
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_default_1"
+                    android:background="@color/weiwei_content_border_color"
+                    android:layout_marginTop="@dimen/dp_default_10"/>
+            <com.dongwukj.weiwei.ui.widget.ParentCartListView
+                    android:id="@+id/parent_cart_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:dividerHeight="@dimen/dp_default_10"
+                    android:scrollbars="none"
+                    android:background="@color/weiwei_background_color"
+                    android:divider="@color/weiwei_content_item_divider_color"
+                    android:footerDividersEnabled="false"
+                    android:layout_weight="1">
+
+            </com.dongwukj.weiwei.ui.widget.ParentCartListView>
+            <View android:layout_width="match_parent" android:layout_height="@dimen/dp_default_1"
+                    android:background="@color/weiwei_content_item_divider_color"/>
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/weiwei_header_content_color">
+
+                <LinearLayout
+                        android:id="@+id/cart_pay_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/dp_default_5"
+                        android:gravity="center_vertical"
+                        android:visibility="visible"
+                        >
+                        <LinearLayout 
+                            android:layout_width="@dimen/dp_default_22"
+                            android:layout_height="@dimen/dp_default_22"
+                            android:padding="@dimen/dp_default_3"
+                            android:layout_gravity="center_vertical"
+                            >
+                            <CheckBox
+                        	android:id="@+id/cb_select"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:checked="true"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/car_check_selector"
+                            android:button="@null"
+                            />
+                        </LinearLayout>
+                    
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_default_2"
+                            android:textSize="@dimen/sp_default_18"
+                            android:text="全选"/>
+                    <TextView android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:layout_marginLeft="@dimen/dp_default_15"
+                              android:text="合计:"
+                              android:textSize="@dimen/sp_default_18"
+                              android:gravity="center_vertical"/>
+                    <TextView
+                            android:id="@+id/parent_cart_total_amount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="￥12.0"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="@dimen/dp_default_2"
+                            android:textColor="@color/red"
+                            android:textSize="@dimen/sp_default_18"/>
+                    <TextView android:layout_width="0dp"
+                              android:layout_height="wrap_content"
+                              android:layout_weight="1"
+                              android:textSize="12sp"
+                              android:text="(折前/不含配送费)"
+                              android:textColor="#9c9c9c"
+                              android:gravity="center"/>
+                    <Button
+                            android:id="@+id/parent_cart_submit_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="结算(99)"
+                            style="@style/WeiWeiBaseYellowButtonStyle"
+                            />
+
+                </LinearLayout>
+                <LinearLayout
+                        android:id="@+id/cart_delete_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/dp_default_5"
+                        android:visibility="gone"
+                        android:gravity="center_vertical"
+                        >
+                      <LinearLayout 
+                            android:layout_width="@dimen/dp_default_22"
+                            android:layout_height="@dimen/dp_default_22"
+                            android:padding="@dimen/dp_default_3"
+                            android:layout_gravity="center_vertical"
+                            >
+                    <CheckBox
+                        	android:id="@+id/cb_delete"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:checked="false"
+                             android:background="@drawable/car_check_selector"
+                            android:button="@null"
+                            />
+						  </LinearLayout>
+                    <TextView android:layout_width="0dp"
+                              android:layout_height="wrap_content"
+                              android:layout_weight="1"
+                              android:layout_marginLeft="@dimen/dp_default_5"
+                              android:textSize="@dimen/sp_default_18"
+                              android:text="全选"
+                              android:gravity="center_vertical"/>
+                    <Button
+                            android:id="@+id/cart_delete_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="删除"
+                            style="@style/WeiWeiBaseYellowButtonStyle"
+                           />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+                android:id="@+id/parent_cart_empty"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/weiwei_background_color"
+                android:visibility="gone"
+                android:clickable="true">
+
+            <!--<TextView
+                    android:id="@+id/parent_cart_empty_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="购物车为空"
+                    android:visibility="gone"/>-->
+            <LinearLayout
+                    android:id="@+id/parent_cart_empty_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical">
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/weiwei_gouwuche_button"
+                        android:layout_gravity="center"
+                        />
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="购物车是空的，赶紧去挑选美食吧"
+                        android:textSize="@dimen/sp_default_18"
+                        android:textColor="@color/pro_guige"
+                        android:layout_marginTop="@dimen/dp_default_22"
+                        android:layout_gravity="center"/>
+                <Button
+                        android:id="@+id/bt_food"
+                        android:layout_width="@dimen/dp_default_85"
+                        android:layout_height="@dimen/dp_default_42"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/dp_default_42"
+                        android:textSize="@dimen/sp_default_16"
+                        android:text="挑美食"
+                        android:textColor="#999999"
+                        android:background="@drawable/weiwei_search_border_img"/>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

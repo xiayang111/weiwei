@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/WeiWeiBaseBackgroundStyle"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/home_title"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dp_default_50"
+        android:background="#8fc31f"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/ll_left"
+            android:layout_width="@dimen/dp_default_40"
+            android:layout_height="@dimen/dp_default_40"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_default_10"
+            android:gravity="center" >
+
+            <ImageView
+                android:id="@+id/list_header_leftbutton"
+                style="@style/WeiWeiHeaderBarBaseStyle_Left" />
+        </LinearLayout>
+        <!--
+             <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/home_header_logo_margin"
+            android:src="@drawable/weiwei_top_back_button" />
+        -->
+		<RelativeLayout 
+		    android:layout_width="0dp"
+		    android:layout_height="match_parent"
+		    android:layout_weight="1"
+		    >
+		     <AutoCompleteTextView
+            android:id="@+id/autotext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/home_header_edittext_margin"
+            android:layout_marginLeft="@dimen/home_header_edittext_margin"
+            android:layout_marginTop="@dimen/home_header_edittext_margin"
+         	android:background="@drawable/weiwei_serach_edittext"
+            android:completionThreshold="1"
+            android:drawableLeft="@drawable/search"
+            android:drawablePadding="@dimen/dp_default_10"
+            android:focusable="true"
+            android:hint="@string/home_header_edittext_hint_text"
+            android:imeOptions="actionSearch"
+            android:paddingBottom="@dimen/home_header_edittext_padding"
+            android:paddingLeft="@dimen/dp_default_15"
+            android:paddingRight="@dimen/home_header_edittext_padding"
+            android:paddingTop="@dimen/home_header_edittext_padding"
+            android:singleLine="true"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/home_header_edittext_textsize" />
+		    
+		    <TextView 
+		        android:id="@+id/delete"
+		        android:layout_width="@dimen/dp_default_20"
+		        android:layout_height="@dimen/dp_default_20"
+		        android:background="@drawable/weiwei_serch_delete"
+		        android:layout_alignParentRight="true"
+		        android:layout_centerVertical="true"
+		        android:layout_marginRight="@dimen/dp_default_5"
+		        android:visibility="gone"
+		        />
+		 </RelativeLayout>
+       
+        <Button
+            android:id="@+id/search"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/home_header_edittext_margin"
+            android:layout_marginRight="@dimen/dp_default_10"
+            android:layout_marginTop="@dimen/home_header_edittext_margin"
+            android:layout_weight="0.3"
+            android:background="@drawable/weiwei_serach_button"
+            android:text="搜索"
+            android:textColor="@color/white" />
+        <!--
+        <RelativeLayout
+            android:id="@+id/rl"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp" 
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/list_header_rightbutton"
+                style="@style/WeiWeiHeaderBarBaseStyle_Right_gonggong"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+        -->
+    </LinearLayout>
+
+    <View style="@style/WeiWeiContentBorderStyle" />
+
+    
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#f0f0f0"
+       >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            
+            >
+
+            <!-- <com.handmark.pulltorefresh.library.PullToRefreshGridView
+                xmlns:ptr="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/gd_detail"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:focusable="true"
+                android:horizontalSpacing="@dimen/combitem_hor_padding"
+                android:listSelector="@color/transparent"
+                android:numColumns="2"
+                android:scrollbars="none"
+                android:verticalSpacing="@dimen/combitem_ver_padding"
+                android:visibility="visible"
+                ptr:ptrMode="pullDownFromTop" /> -->
+                   <com.handmark.pulltorefresh.library.PullToRefreshListView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/gd_detail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/home_title"
+        android:cacheColorHint="#00000000"
+        android:divider="#f0f0f0"
+        android:dividerHeight="@dimen/dp_default_5"
+        android:fadingEdge="none"
+         android:layout_marginTop="@dimen/dp_default_5"
+        android:layout_marginRight="@dimen/dp_default_5"
+        android:layout_marginLeft="@dimen/dp_default_5"
+        android:fastScrollEnabled="false"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:scrollbars="none"
+        android:smoothScrollbar="true"
+        ptr:ptrMode="pullDownFromTop"
+         >
+    </com.handmark.pulltorefresh.library.PullToRefreshListView>
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/sl"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+             android:scrollbars="none"
+            android:background="#f0f0f0" >
+
+            <LinearLayout
+                android:id="@+id/ll"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_default_10"
+         
+                android:orientation="vertical"
+                android:visibility="visible" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                     android:background="@drawable/weiwei_base_text_bg"
+                    android:layout_marginLeft="@dimen/dp_default_5"
+                    android:layout_marginRight="@dimen/dp_default_5"
+                    android:layout_marginTop="@dimen/dp_default_10"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_default_40"
+                        android:drawableLeft="@drawable/weiwei_lately_serch"
+                        android:drawablePadding="@dimen/dp_default_10"
+                        android:padding="@dimen/dp_default_6"
+                        android:gravity="center_vertical"
+                        android:text="最近搜索"
+                        android:textColor="@color/left_category_text_color"
+                        android:textSize="@dimen/sp_default_15" />
+					<View style="@style/WeiWeiContentBorderStyleNew"/>
+					<TextView 
+					    	android:id="@+id/tv_empty1"
+					    android:layout_width="match_parent"
+					    android:layout_height="60dp"
+					    android:text="您还没有搜索历史哦~"
+					    android:gravity="center"
+					    android:textColor="#7c7c7c"
+					    android:textSize="@dimen/sp_default_18"
+					    android:visibility="gone"
+					    />
+                    <com.dongwukj.weiwei.ui.widget.MyGridView
+                        android:id="@+id/gd_near"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:horizontalSpacing="@dimen/combitem_hor_padding"
+                        android:numColumns="3"
+                        android:paddingLeft="@dimen/dp_default_10"
+                           android:layout_marginTop="@dimen/dp_default_10"
+                        android:paddingRight="@dimen/dp_default_10"
+                        android:verticalSpacing="@dimen/combitem_ver_padding" 
+                        android:listSelector="#00000000"
+                        android:layout_marginBottom="@dimen/dp_default_10"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                         android:background="@drawable/weiwei_base_text_bg"
+                    android:layout_marginLeft="@dimen/dp_default_5"
+                    android:layout_marginRight="@dimen/dp_default_5"
+                    android:layout_marginTop="@dimen/dp_default_10" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_default_40"
+                        android:drawableLeft="@drawable/weiwei_hot_serch"
+                        android:drawablePadding="@dimen/dp_default_10"
+                        android:padding="@dimen/dp_default_6"
+                        android:text="热门搜索"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/left_category_text_color"
+                        android:textSize="@dimen/sp_default_15" />
+			<View style="@style/WeiWeiContentBorderStyleNew"/>
+			<TextView 	
+			    android:visibility="gone"
+			    		android:id="@+id/tv_empty2"
+					    android:layout_width="match_parent"
+					    android:layout_height="@dimen/dp_default_60"
+					    android:text="暂时还没有热门搜索哦~"
+					    android:gravity="center"
+					    android:textColor="#7c7c7c"
+					    android:textSize="@dimen/sp_default_18"
+					    />
+                    <com.dongwukj.weiwei.ui.widget.MyGridView
+                        android:id="@+id/gd_new"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:horizontalSpacing="@dimen/combitem_hor_padding"
+                        android:numColumns="3"
+                        android:paddingLeft="@dimen/dp_default_10"
+                        android:paddingRight="@dimen/dp_default_10"
+                        android:layout_marginTop="@dimen/dp_default_10"
+                        android:verticalSpacing="@dimen/combitem_hor_padding"
+                            android:listSelector="#00000000" 
+                            android:layout_marginBottom="@dimen/dp_default_10"/>
+                </LinearLayout>
+                
+                <Button 
+                    android:id="@+id/bt_clear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="清空历史搜索"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/dp_default_80"
+                    android:background="@drawable/weiwei_button_orange_fill"
+                    android:paddingTop="@dimen/dp_default_10"
+                    android:paddingBottom="@dimen/dp_default_10"
+                    android:paddingLeft="@dimen/dp_default_20"
+                    android:paddingRight="@dimen/dp_default_20"
+                    android:textSize="@dimen/sp_default_18"
+                    android:layout_marginLeft="@dimen/dp_default_20"
+                    android:layout_marginRight="@dimen/dp_default_20"
+                    android:textColor="@color/white"
+                    />
+                <View android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_default_30"
+                    android:background="@color/transparent"/>
+            </LinearLayout>
+        </ScrollView>
+        <LinearLayout 
+            android:id="@+id/ll_wrong"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:visibility="gone"
+            >
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/weiwei_search_wrong"
+                android:layout_marginRight="@dimen/dp_default_5"
+                />
+             <!--  <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="没有找到与"
+                android:textColor="@color/gray"
+                /> -->
+            <TextView 
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_default_16"
+               	android:textColor="@color/black"
+                android:layout_marginRight="@dimen/dp_default_5"
+                android:gravity="center"
+                />
+              <!-- <TextView 
+               android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="相关的宝贝"
+                android:textColor="@color/gray"
+                /> -->
+        </LinearLayout>
+    </RelativeLayout>
+	  <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_default_1"
+            android:background="@color/weiwei_content_border_color" />
+
+         <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <RadioGroup
+                android:id="@+id/tabs_rg"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/dp_default_7"
+                android:paddingTop="@dimen/dp_default_7" >
+
+                <RadioButton
+                    android:id="@+id/tab_rb_a"
+                    style="@style/MainTabBottomRadioStyle"
+                    android:checked="false"
+                    android:drawableTop="@drawable/home_selector_tab"
+                    android:text="@string/home_radio_text_home" />
+
+                 <RadioButton
+                    android:id="@+id/tab_rb_b"
+                    style="@style/MainTabBottomRadioStyle"
+                    android:drawableTop="@drawable/category_seletor_tab"
+                    android:text="@string/home_radio_text_category" />
+
+                <RadioButton
+                    android:id="@+id/tab_rb_d"
+                    style="@style/MainTabBottomRadioStyle"
+                    android:drawableTop="@drawable/gouwuche_seletor_tab"
+                    android:text="@string/home_radio_text_cart" />
+
+                <RadioButton
+                    android:id="@+id/tab_rb_c"
+                    style="@style/MainTabBottomRadioStyle"
+                    android:drawableTop="@drawable/weiwei_seletor_tab"
+                    android:text="@string/home_radio_text_weiwei" />
+
+                <!-- <RadioButton -->
+                <!-- android:id="@+id/tab_rb_e" -->
+                <!-- android:layout_width="0dp" -->
+                <!-- android:layout_height="wrap_content" -->
+                <!-- android:drawableTop="@drawable/tababoutus" -->
+                <!-- android:button="@null" -->
+                <!-- android:text="@string/home_radio_text_taocan" -->
+                <!-- android:textColor="#000000" -->
+                <!-- android:textSize="13sp" -->
+                <!-- android:layout_weight="1.0" -->
+                <!-- android:gravity="center" -->
+                <!-- android:singleLine="true" -->
+                <!-- android:background="@drawable/selector_tab" -->
+                <!-- /> -->
+
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_default_30"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@null" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@null" />
+				  <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@null" />
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" 
+                    android:gravity="top">
+
+                    <Button
+                        android:id="@+id/bt"
+                        android:layout_width="@dimen/dp_default_30"
+                        android:layout_height="@dimen/dp_default_25"
+                        android:layout_marginTop="@dimen/dp_default_1"
+                        android:background="@null"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="@dimen/dp_default_15" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@null" />
+            </LinearLayout>
+        </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_default_60"
+    android:background="#8fc31f" >
+
+   <!--  <ImageButton
+        android:id="@+id/button_back"
+        android:layout_width="75.0dip"
+        android:text="返回"
+        android:background="@null"
+        android:textColor="@android:color/white"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="2dip"
+        android:src="@drawable/weiwei_top_back_button" /> -->
+<!-- <ImageButton	
+            android:id="@+id/button_back"
+            style="@style/WeiWeiHeaderBarBaseStyle_Left"
+            
+            /> -->
+ <LinearLayout
+        android:id="@+id/ll_left"
+        android:layout_width="@dimen/dp_default_40"
+        android:layout_height="@dimen/dp_default_40"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dp_default_10"
+        android:gravity="center" >
+
+        <ImageView
+            android:id="@+id/list_header_leftbutton"
+            android:clickable="false"
+            android:focusable="false"
+            style="@style/WeiWeiHeaderBarBaseStyle_Left" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/textview_title"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_default_50"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_vertical"
+        android:text="扫一扫"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_default_20" />
+	
+</RelativeLayout>

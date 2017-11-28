@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_classfy"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_default_70"
+    android:minHeight="@dimen/dp_default_70"
+     android:background="@drawable/classfy_bg"
+    >
+   
+    <ImageView 
+        android:id="@+id/classify_img"
+        android:layout_width="@dimen/dp_default_50"
+        android:layout_height="@dimen/dp_default_50"
+        android:scaleType="fitXY"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/dp_default_20"
+        android:src="@drawable/default_small"
+        
+        />
+	<TextView 
+	    android:id="@+id/classify_name"
+	    android:layout_toLeftOf="@id/classify_img"
+	    android:layout_width="wrap_content"
+	    android:layout_height="match_parent"
+	    android:layout_centerVertical="true"
+	    android:textSize="@dimen/sp_default_16"
+	    android:layout_marginRight="@dimen/dp_default_15"
+	    android:text="全部"
+	    android:gravity="center_vertical"
+	    />
+	 <ImageView 
+	     android:id="@+id/select"
+        android:layout_width="@dimen/dp_default_5"
+        android:layout_height="@dimen/dp_default_70"
+        android:scaleType="fitXY"
+        android:layout_centerVertical="true"
+        android:background="@drawable/classfy_selected" 
+        />
+</RelativeLayout >

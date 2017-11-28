@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_default_30"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/dp_default_10"
+    android:paddingTop="@dimen/dp_default_5"
+    android:paddingBottom="@dimen/dp_default_5" >
+    <TextView 
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:textColor="#7c7c7c"
+        android:gravity="center_vertical"
+        android:textSize="@dimen/sp_default_16"
+        android:text="2015-15-15 45:45:45"
+        />
+ <TextView 
+        android:id="@+id/tv_actionname"
+         android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:textColor="#333333"
+        android:textSize="@dimen/sp_default_16"
+           android:gravity="center_vertical"
+        android:text="已经付款"
+        android:layout_marginLeft="@dimen/dp_default_5"
+        />
+</LinearLayout>

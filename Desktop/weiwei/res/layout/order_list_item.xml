@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/weiwei_base_text_bg"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_default_70"
+        android:layout_marginLeft="@dimen/dp_default_10"
+        >
+
+        <TextView
+            android:id="@+id/tv_orderstate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dp_default_10"
+            android:gravity="center"
+            android:text="付款"
+            android:textSize="@dimen/sp_default_20"
+            android:layout_centerVertical="true"
+            android:textColor="#e80000" />
+
+        <Button
+            android:id="@+id/bt_accept"
+           	android:background="@drawable/weiwei_button_green"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_default_40"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_default_10"
+            android:focusable="false"
+            android:gravity="center"
+            android:text="去支付"
+            android:paddingLeft="@dimen/dp_default_5"
+            android:paddingRight="@dimen/dp_default_5"
+            android:textColor="@color/left_category_select_text_color"
+            android:textSize="@dimen/sp_default_20" />
+    </RelativeLayout>
+	<View android:layout_width="match_parent" android:layout_height="@dimen/px_default_1" android:background="@color/weiwei_content_border_color"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_ordernum"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_default_40" 
+            android:layout_marginLeft="@dimen/dp_default_10"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="@dimen/sp_default_16"
+                android:text="订单编号:" />
+
+            <TextView
+                android:id="@+id/tv_ordernum"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center|left"
+                android:text="12313"
+                      android:textSize="@dimen/sp_default_16"
+                android:textColor="#7c7c7c" />
+        </LinearLayout>
+		<View android:layout_width="match_parent" android:layout_height="@dimen/px_default_1" android:background="@color/weiwei_content_border_color"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_default_40"
+            android:layout_below="@id/ll_ordernum"
+                android:layout_marginLeft="@dimen/dp_default_10" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                   android:textSize="@dimen/sp_default_16"
+                android:text="订单时间:" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center|left"
+                android:text="12313"
+                   android:textSize="@dimen/sp_default_16"
+                android:textColor="#7c7c7c" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_default_10"
+                android:orientation="horizontal"
+            android:layout_below="@id/ll_ordernum" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/sp_default_16"
+                android:text="订单商品:" />
+			<LinearLayout 
+			    android:layout_width="0dp"
+			    android:layout_weight="1"
+			    android:layout_height="wrap_content"
+			    android:orientation="vertical"
+			    >
+			    <LinearLayout 
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:orientation="horizontal"
+			        >
+			          <TextView
+			     android:id="@+id/product_name1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+               android:textColor="#7c7c7c" 
+               android:textSize="@dimen/sp_default_16"
+                android:text="订单商品:"
+                android:minEms="6" />
+			            <TextView
+			    android:id="@+id/product_weight1"      
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                 android:textColor="#7c7c7c" 
+                   android:textSize="@dimen/sp_default_16"
+                android:text="订单商品:" />
+			    </LinearLayout>
+
+			         <LinearLayout 
+			             android:id="@+id/ll_product2"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:orientation="horizontal"
+			        android:layout_marginTop="@dimen/dp_default_10"
+			        >
+			          <TextView
+			              android:id="@+id/product_name2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+               
+                 android:textColor="#7c7c7c" 
+                   android:textSize="@dimen/sp_default_16"
+                android:text="订单商品:" 
+                android:minEms="6" />
+			            <TextView
+			                	    android:id="@+id/product_weight2" 
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                   android:textSize="@dimen/sp_default_16"
+                    android:textColor="#7c7c7c" 
+                android:text="订单商品:" />
+			    </LinearLayout>
+
+			</LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_undone"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dp_default_50"
+            android:layout_marginLeft="@dimen/dp_default_10"
+        android:gravity="center_vertical"
+        android:visibility="visible" >
+
+        <TextView
+            android:id="@+id/order_list_item_ordercount"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:gravity="center_vertical"
+            android:text="实付金额:"
+            android:textColor="#333333"
+            android:textSize="@dimen/sp_default_16" />
+
+        <TextView
+            android:id="@+id/tv_orderpay"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/order_list_item_ordercount"
+            android:gravity="center"
+            android:text="1"
+            android:textColor="#7c7c7c"
+            android:textSize="@dimen/sp_default_18"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</LinearLayout>

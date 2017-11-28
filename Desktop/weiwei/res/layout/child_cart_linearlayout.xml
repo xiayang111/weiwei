@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.dongwukj.weiwei.ui.widget.NotScrollableListView xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:divider="@color/whitesmoke"
+              android:scrollbars="none"
+              android:dividerHeight="@dimen/dp_default_10">
+
+</com.dongwukj.weiwei.ui.widget.NotScrollableListView>

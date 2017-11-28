@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.dongwukj.weiwei.ui.widget.CusLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dp_default_10"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+  
+	<FrameLayout 
+	    android:id="@+id/category_fm"
+	    android:layout_height="@dimen/dp_default_220"
+	    android:layout_width="match_parent"
+	   	></FrameLayout>
+ 
+
+
+
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_default_11"
+        android:background="@drawable/fengexian"
+        android:layout_marginBottom="@dimen/dp_default_1"
+        />
+
+
+</com.dongwukj.weiwei.ui.widget.CusLinearLayout>

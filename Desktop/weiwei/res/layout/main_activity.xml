@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <FrameLayout
+            android:id="@+id/tab_content"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.0" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/weiwei_content_border_color" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <RadioGroup
+                android:id="@+id/tabs_rg"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/dp_default_7"
+                android:paddingTop="@dimen/dp_default_7" >
+
+                <RadioButton
+                    android:id="@+id/tab_rb_a"
+                    style="@style/MainTabBottomRadioStyle"
+                    android:checked="true"
+                    android:drawableTop="@drawable/home_selector_tab"
+                    android:text="@string/home_radio_text_home" />
+
+                 <RadioButton
+                    android:id="@+id/tab_rb_b"
+                    style="@style/MainTabBottomRadioStyle"
+                    android:drawableTop="@drawable/category_seletor_tab"
+                    android:text="@string/home_radio_text_category" />
+
+                <RadioButton
+                    android:id="@+id/tab_rb_d"
+                    style="@style/MainTabBottomRadioStyle"
+                    android:drawableTop="@drawable/gouwuche_seletor_tab"
+                    android:text="@string/home_radio_text_cart" />
+
+                <RadioButton
+                    android:id="@+id/tab_rb_c"
+                    style="@style/MainTabBottomRadioStyle"
+                    android:drawableTop="@drawable/weiwei_seletor_tab"
+                    android:text="@string/home_radio_text_weiwei" />
+
+                <!-- <RadioButton -->
+                <!-- android:id="@+id/tab_rb_e" -->
+                <!-- android:layout_width="0dp" -->
+                <!-- android:layout_height="wrap_content" -->
+                <!-- android:drawableTop="@drawable/tababoutus" -->
+                <!-- android:button="@null" -->
+                <!-- android:text="@string/home_radio_text_taocan" -->
+                <!-- android:textColor="#000000" -->
+                <!-- android:textSize="13sp" -->
+                <!-- android:layout_weight="1.0" -->
+                <!-- android:gravity="center" -->
+                <!-- android:singleLine="true" -->
+                <!-- android:background="@drawable/selector_tab" -->
+                <!-- /> -->
+
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_default_30"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@null" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@null" />
+				  <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@null" />
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" 
+                    android:gravity="top">
+
+                    <Button
+                        android:id="@+id/bt"
+                        android:layout_width="@dimen/dp_default_30"
+                        android:layout_height="@dimen/dp_default_25"
+                        android:layout_marginTop="1dp"
+                        android:background="@null"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="@dimen/dp_default_15" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@null" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+	<WebView 
+	    android:id="@+id/webview"
+	    android:background="@drawable/weiwei_base_text_bg"
+	    android:layout_margin="@dimen/dp_default_5"
+	    android:paddingTop="@dimen/dp_default_5"
+	    android:paddingBottom="@dimen/dp_default_5"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    />
+</LinearLayout>

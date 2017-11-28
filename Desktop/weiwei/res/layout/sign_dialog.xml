@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+     >
+	<ImageView 
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:background="@drawable/weiwei_bg_sign"
+	    />
+
+	 <ImageButton
+	     android:id="@+id/bt"
+	     android:layout_width="18dp"
+	     android:layout_height="18dp"
+	     android:layout_alignParentRight="true"
+	     android:layout_alignParentTop="true"
+	     android:layout_marginRight="36dp"
+	     android:layout_marginTop="73dp"
+	     android:background="@drawable/weiwei_icon3" />
+
+	 <LinearLayout
+	     android:layout_width="fill_parent"
+	     android:layout_height="wrap_content"
+	     android:layout_alignParentLeft="true"
+	     android:layout_below="@+id/bt"
+	     android:layout_marginTop="50dp"
+	     android:orientation="vertical" >
+
+	     <TextView
+	         android:layout_width="fill_parent"
+	         android:layout_height="0dp"
+	         android:layout_gravity="center_horizontal"
+	         android:layout_weight="1"
+	         android:gravity="center"
+	         android:text="签到成功"
+	         android:textColor="@color/white"
+	         android:textSize="25sp"
+	         android:textStyle="bold" 
+	         android:layout_marginBottom="25dp"/>
+
+	     <TextView
+	         android:id="@+id/tv_payCredits"
+	         android:layout_width="fill_parent"
+	         android:layout_height="0dp"
+	         android:layout_gravity="center"
+	         android:layout_weight="1"
+	         android:gravity="center"
+	         android:textColor="@color/white"
+	         android:textSize="18sp"
+	         android:text="18" />
+
+<!-- 	     <RelativeLayout
+	         android:layout_width="fill_parent"
+	         android:layout_height="wrap_content"
+	         android:layout_weight="2" > -->
+
+	         <TextView
+	             android:id="@+id/tv_sumpayCredits"
+	             android:layout_width="80dp"
+	             android:layout_height="80dp"
+	             android:layout_marginTop="25dp"
+	             android:layout_centerInParent="true"
+	             android:background="@color/sign_bg_text_color"
+	             android:gravity="center"
+	             android:layout_gravity="center_horizontal"
+	             android:text="20"
+	             android:textColor="@color/sign_text"
+	             android:textSize="30sp" />
+	     <!-- </RelativeLayout> -->
+	 </LinearLayout>
+
+</RelativeLayout>

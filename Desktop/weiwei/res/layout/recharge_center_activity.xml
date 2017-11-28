@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools" android:orientation="vertical"
+              android:id="@+id/sc"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:fillViewport="true"
+              android:scrollbars="none"
+              android:overScrollMode="never"
+        android:background="@color/weiwei_background_color">
+	
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="@dimen/dp_default_150">
+               <ImageView 
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:background="@drawable/weiwei_recharge"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_default_55"
+                    android:background="@drawable/weiwei_base_text_bg"
+                    android:layout_margin="@dimen/dp_default_5"
+                    >
+				
+                <TextView
+                    android:id="@+id/et_tel"
+                        android:layout_width="match_parent"
+                        android:layout_height="38dp"
+                        android:layout_marginLeft="@dimen/dp_default_10"
+                        android:layout_marginRight="@dimen/dp_default_10"
+                        android:background="@drawable/weiwei_edittext_gray_transparency"
+                        android:paddingLeft="@dimen/dp_default_5"
+                        android:layout_centerInParent="true"
+                        android:textSize="@dimen/sp_default_16"
+                        android:gravity="center_vertical"
+                        />
+         
+            </RelativeLayout>
+
+			<RadioGroup 
+			    android:id="@+id/rl_choose"
+			    android:layout_width="match_parent"
+			    android:layout_height="40dp"
+			    android:orientation="horizontal"
+			    android:layout_marginTop="@dimen/dp_default_10"
+			    
+			    >
+			    <RadioButton 
+			        android:id="@+id/rb_net_recharge"
+			        android:layout_width="100dp"
+			        android:layout_height="match_parent"
+			        android:text="在线充值"
+			        android:background="@color/recharge_textview_selector"
+			        android:textSize="@dimen/sp_default_17"
+			        android:textColor="@color/right_category_grid_text_color"
+			        android:gravity="center"
+			        android:checked="true"
+			        android:layout_marginRight="@dimen/dp_default_5"
+			        android:layout_marginLeft="@dimen/dp_default_5"
+			        android:button="@null"
+			        />
+			    <RadioButton 
+			        android:layout_toRightOf="@id/rb_net_recharge"
+			        android:id="@+id/rb_cart_recharge"
+			        android:layout_width="@dimen/dp_default_115"
+			        android:layout_height="match_parent"
+			        android:text="充值卡充值"
+			        android:background="@color/recharge_textview_selector"
+			        android:textSize="@dimen/sp_default_17"
+			        android:textColor="@color/right_category_grid_text_color"
+			        android:gravity="center"
+			          android:checked="false"
+			            android:button="@null"
+			        />
+			    
+			</RadioGroup>
+
+			<FrameLayout 
+			    android:id="@+id/fl_recharge"
+			    android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_default_5"
+                android:layout_marginRight="@dimen/dp_default_5"
+                android:visibility="gone"
+			    ></FrameLayout>
+			
+			<LinearLayout 
+			    android:id="@+id/ll_net_recharge"
+			    android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+			    >
+			
+            <LinearLayout
+                	android:id="@+id/ll_recharge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/weiwei_base_text_bg_for_recharge"
+                    
+                   	android:layout_marginLeft="@dimen/dp_default_5"
+                   	android:layout_marginRight="@dimen/dp_default_5"
+                    android:visibility="visible"
+                    
+                    >
+                <com.dongwukj.weiwei.ui.widget.MyGridView
+                        android:id="@+id/recharge_gridview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:numColumns="3"
+                        android:verticalSpacing="@dimen/dp_default_10"
+                        android:horizontalSpacing="@dimen/dp_default_20"
+                        android:stretchMode="columnWidth"
+                        android:choiceMode="singleChoice"
+						android:focusable="false"
+                      	android:layout_margin="@dimen/dp_default_5"
+                        >
+                </com.dongwukj.weiwei.ui.widget.MyGridView>
+              
+                </LinearLayout>
+                
+            
+		
+            <TextView
+                	android:id="@+id/tv_present"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/red"
+                    android:layout_marginTop="@dimen/dp_default_10"
+                    android:layout_marginLeft="@dimen/dp_default_10"
+                    />
+            <Button	
+                android:id="@+id/bt_recharge"
+                    android:layout_width="match_parent"
+                    android:text="立即充值"
+                    android:layout_marginRight="@dimen/dp_default_25"
+                    android:layout_marginLeft="@dimen/dp_default_25"
+                    android:layout_marginTop="@dimen/dp_default_20"
+                    android:textSize="@dimen/sp_default_18"
+                    style="@style/WeiWeiBaseYellowButtonStyle"
+                    />
+            <View
+                android:id="@+id/settingBottom"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_default_50"
+                android:layout_gravity="bottom"
+                android:background="@color/transparent" />
+            </LinearLayout>
+            
+        </LinearLayout>
+</ScrollView>

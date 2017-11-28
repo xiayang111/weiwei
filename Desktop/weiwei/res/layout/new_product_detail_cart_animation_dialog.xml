@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dialog_layout"
+    android:layout_width="166.0dip"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10.0dip"
+    android:background="@drawable/new_product_cart_animaion_bg"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:visibility="invisible" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="12.0dip"
+        android:text="@string/put_cart_tip"
+        android:textColor="@color/white"
+        android:textSize="15.0sp" />
+
+    <TextView
+        android:id="@+id/payment_txt"
+        style="@style/submit_red_small_button_style"
+        android:layout_width="fill_parent"
+        android:layout_marginBottom="12.0dip"
+        android:layout_marginLeft="12.0dip"
+        android:layout_marginRight="12.0dip"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="@string/buy_subimt_txt"
+        android:textColor="@color/white"
+        android:textSize="14.0sp" />
+
+</LinearLayout>

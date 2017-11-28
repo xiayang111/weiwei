@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/weiwei_background_color"
+    android:orientation="vertical" >
+
+     <RelativeLayout
+        style="@style/WeiWeiHeaderBarBaseStyle"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/list_header_title"
+            style="@style/WeiWeiHeaderBarBaseStyle_Title" />
+
+        <LinearLayout
+            android:id="@+id/ll_left"
+            android:layout_width="@dimen/dp_default_40"
+            android:layout_height="@dimen/dp_default_40"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_default_10"
+            android:gravity="center" 
+            >
+
+            <ImageView
+                android:id="@+id/list_header_leftbutton"
+                style="@style/WeiWeiHeaderBarBaseStyle_Left" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl"
+            android:layout_width="@dimen/dp_default_60"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp_default_10" >
+
+            <TextView
+                android:id="@+id/list_header_rightbutton"
+                style="@style/WeiWeiHeaderBarBaseStyle_Right_gonggong"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+        <View
+            style="@style/WeiWeiContentBorderStyle"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+    <!-- <View
+        style="@style/WeiWeiContentBorderStyle"
+        android:layout_marginTop="5dp" /> -->
+    
+    <com.handmark.pulltorefresh.library.PullToRefreshGridView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/layout_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="@dimen/combo_ScrollView_marginTop"
+        android:horizontalSpacing="@dimen/combo_GridView_horizontalSpacing"
+        android:listSelector="@color/transparent"
+        android:numColumns="2"
+        android:padding="@dimen/combo_GridView_padding"
+        android:verticalSpacing="@dimen/combo_GridView_verticalSpacing"
+        ptr:ptrMode="pullDownFromTop" 
+         android:scrollbars="none"
+        />
+
+</LinearLayout>

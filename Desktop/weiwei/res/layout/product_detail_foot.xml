@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="64.0dip"
+    android:focusable="true"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="8.0dip"
+    android:paddingRight="8.0dip" >
+
+    <LinearLayout
+        android:id="@+id/bag_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="10.0dip"
+        android:layout_marginTop="10.0dip"
+        android:background="@drawable/btn_white_bg"
+        android:gravity="center"
+        android:minWidth="99.0dip" >
+
+        <RelativeLayout
+            android:id="@+id/tag"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true" >
+
+            <ImageView
+                android:id="@+id/bag_img"
+                android:layout_width="24.0dip"
+                android:layout_height="24.0dip"
+                android:layout_centerVertical="true"
+                android:src="@drawable/bottom_shoppingcar_normal" />
+
+            <RelativeLayout
+                android:id="@+id/bag_num_layout"
+                android:layout_width="23.0dip"
+                android:layout_height="23.0dip"
+                android:layout_above="@id/bag_img"
+                android:layout_marginBottom="-15.0dip"
+                android:layout_marginLeft="-11.0dip"
+                android:layout_toRightOf="@id/bag_img" >
+
+                <TextView
+                    android:id="@+id/bag_Num"
+                    android:layout_width="13.0dip"
+                    android:layout_height="13.0dip"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/bg_shoppingcar_small"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="9.0dip"
+                    android:visibility="visible" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/down_time_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="0.0dip"
+            android:layout_toRightOf="@id/tag"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/des"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/detail_cart_tips"
+                android:textColor="@color/detail_black"
+                android:textSize="11.0dip" />
+
+            <TextView
+                android:id="@+id/down_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="3.0dip"
+                android:layout_toRightOf="@id/bag_img"
+                android:clickable="true"
+                android:singleLine="true"
+                android:textColor="@color/detail_pink_dark"
+                android:textSize="12.0sp"
+                android:visibility="visible" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/product_detail_add_cart"
+        style="@style/submit_red_big_button_style"
+        android:layout_width="fill_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="10.0dip"
+        android:layout_marginLeft="6.0dip"
+        android:layout_marginTop="10.0dip"
+        android:layout_toRightOf="@+id/bag_layout"
+        android:text="@string/product_add_cart"
+        android:textSize="14.0sp" />
+
+</LinearLayout>

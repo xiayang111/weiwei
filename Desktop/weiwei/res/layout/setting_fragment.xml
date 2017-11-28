@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    
+    <RelativeLayout
+         xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/rl_setting_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+        android:background="#f0f0f0">
+
+        
+        <LinearLayout
+            android:id="@+id/settingHeaderContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/weiwei_base_text_bg"
+            android:layout_margin="@dimen/dp_default_5"
+            android:orientation="vertical" >
+
+      
+
+            <LinearLayout
+                android:id="@+id/ll_set1"
+                android:visibility="gone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_default_2"
+                android:background="@color/weiwei_content_background_color"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/rl_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_default_43"
+                    android:layout_margin="@dimen/dp_default_5"
+                    android:layout_marginRight="@dimen/dp_default_15"
+                    android:gravity="center_vertical" 
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/iv_address"
+                        android:layout_width="@dimen/dp_default_23"
+                        android:layout_height="@dimen/dp_default_20"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignTop="@+id/iv1_address"
+                        android:gravity="center_vertical"
+                        android:src="@drawable/setting_location" />
+
+                    <TextView
+                        android:id="@+id/tv_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="@dimen/dp_default_10"
+                        android:layout_toRightOf="@id/iv_address"
+                        android:gravity="center_vertical"
+                        android:text="设置地理位置"
+                        android:textSize="@dimen/sp_default_14" />
+
+                    <ImageView
+                        android:layout_marginRight="@dimen/dp_default_15"
+                        android:id="@+id/iv1_address"
+                        style="@style/WeiWeiRelativeMoreButtonStyle" />
+
+                    <TextView
+                        android:id="@+id/tv_address_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginRight="@dimen/dp_default_5"
+                        android:layout_toLeftOf="@id/iv1_address"
+                        android:gravity="center_vertical"
+                        android:text=""
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/sp_default_14" />
+                    <!-- </LinearLayout> -->
+
+                </RelativeLayout>
+
+               
+
+                <RelativeLayout
+                    android:id="@+id/rl_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_default_43"
+                    android:layout_margin="@dimen/dp_default_5"
+                    android:layout_marginRight="@dimen/dp_default_15"
+                    android:gravity="center_vertical" >
+
+                    <ImageView
+                        android:id="@+id/iv_hint"
+                        android:layout_width="@dimen/dp_default_23"
+                        android:layout_height="@dimen/dp_default_20"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/setting_network" />
+
+                    <TextView
+                        android:id="@+id/tv_hint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="@dimen/dp_default_10"
+                        android:layout_toRightOf="@id/iv_hint"
+                        android:gravity="center_vertical"
+                        android:text="2G/3G下提示手动加载图片"
+                        android:textSize="@dimen/sp_default_14" />
+
+                    <CheckBox
+                        android:id="@+id/cb_hint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dp_default_10"
+                        android:checked="false"
+                        style="@style/WeiWeiSwitchCheckBoxStyle"/>
+                </RelativeLayout>
+
+         
+			<View android:layout_width="match_parent" android:layout_height="1px" android:background="#f0f0f0"/>
+                <RelativeLayout
+                    android:id="@+id/rl_3"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_default_43"
+                    android:layout_margin="@dimen/dp_default_5"
+                    android:layout_marginRight="@dimen/dp_default_15"
+                    android:gravity="center_vertical" >
+
+                    <ImageView
+                        android:id="@+id/iv_safe"
+                        android:layout_width="@dimen/dp_default_23"
+                        android:layout_height="@dimen/dp_default_20"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignTop="@+id/iv1_safe"
+                        android:src="@drawable/setting_safe" />
+
+                    <TextView
+                        android:id="@+id/tv_safe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="@dimen/dp_default_10"
+                        android:layout_toRightOf="@id/iv_safe"
+                        android:gravity="center_vertical"
+                        android:text="账号安全"
+                        android:textSize="@dimen/sp_default_14" />
+
+                    <ImageView
+                        android:id="@+id/iv1_safe"
+                        android:layout_marginRight="@dimen/dp_default_15"
+                        style="@style/WeiWeiRelativeMoreButtonStyle" />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+         
+
+            
+
+          
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/ll_set2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_default_2"
+                android:background="@color/weiwei_content_background_color"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/rl_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_default_43"
+                    android:layout_margin="@dimen/dp_default_5"
+                    android:gravity="center_vertical" >
+
+                    <ImageView
+                        android:id="@+id/iv_notice"
+                        android:layout_width="@dimen/dp_default_23"
+                        android:layout_height="@dimen/dp_default_20"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/setting_receive" />
+
+                    <TextView
+                        android:id="@+id/tv_notice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="@dimen/dp_default_10"
+                        android:layout_toRightOf="@id/iv_notice"
+                        android:gravity="center_vertical"
+                        android:text="接收通知"
+                        android:textSize="@dimen/sp_default_14" />
+
+                    <CheckBox
+                        android:id="@+id/cb_notice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dp_default_10"
+                        android:checked="false"
+                        style="@style/WeiWeiSwitchCheckBoxStyle"/>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/dp_default_0.5"
+                    android:layout_marginLeft="@dimen/dp_default_40"
+                    android:background="@color/weiwei_content_border_color" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_default_43"
+                    android:layout_margin="@dimen/dp_default_5"
+                    android:layout_marginRight="@dimen/dp_default_15"
+                    android:gravity="center_vertical" >
+
+                    <ImageView
+                        android:id="@+id/iv_push"
+                        android:layout_width="@dimen/dp_default_23"
+                        android:layout_height="@dimen/dp_default_20"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/setting_push_message" />
+
+                    <TextView
+                        android:id="@+id/tv_push"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="@dimen/dp_default_10"
+                        android:layout_toRightOf="@id/iv_push"
+                        android:gravity="center_vertical"
+                        android:text="消息推送设置"
+                        android:textSize="@dimen/sp_default_14" />
+
+                    <ImageView
+                        android:id="@+id/iv1_push"
+                        style="@style/WeiWeiRelativeMoreButtonStyle"
+                        android:layout_marginRight="@dimen/dp_default_15"
+                        android:visibility="gone"
+                         />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+            
+
+         
+
+            <LinearLayout
+                android:id="@+id/ll_set3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_default_2"
+                android:background="@color/weiwei_content_background_color"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/rl_6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_default_43"
+                    android:layout_margin="@dimen/dp_default_5"
+                    android:gravity="center_vertical" 
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/iv_services"
+                        android:layout_width="@dimen/dp_default_23"
+                        android:layout_height="@dimen/dp_default_20"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/setting_service" />
+
+                    <TextView
+                        android:id="@+id/tv_services"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="@dimen/dp_default_10"
+                        android:layout_toRightOf="@id/iv_services"
+                        android:gravity="center_vertical"
+                        android:text="联系客服（027-87776107）"
+                        android:textSize="@dimen/sp_default_14" />
+					<TextView
+                        android:layout_toLeftOf="@+id/iv1_services"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="@dimen/dp_default_10"
+                         android:gravity="center_vertical"
+                         android:textColor="#7c7c7c"
+                        android:text="拨号"
+                        android:layout_marginRight="@dimen/dp_default_5"
+                        android:textSize="@dimen/sp_default_14" />
+                    <ImageView
+                        android:id="@+id/iv1_services"
+                        android:layout_marginRight="@dimen/dp_default_15"
+                        style="@style/WeiWeiRelativeMoreButtonStyle" />
+                </RelativeLayout>
+
+              	<View android:layout_width="match_parent" android:layout_height="1px" android:background="#f0f0f0"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_default_43"
+                    android:layout_margin="@dimen/dp_default_5"
+                    android:gravity="center_vertical" >
+
+                    <ImageView
+                        android:id="@+id/iv_versions"
+                        android:layout_width="@dimen/dp_default_23"
+                        android:layout_height="@dimen/dp_default_20"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/setting_update" />
+
+                    <TextView
+                        android:id="@+id/tv_versions"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="@dimen/dp_default_10"
+                        android:layout_toRightOf="@id/iv_versions"
+                        android:gravity="center_vertical"
+                        android:text="当前版本"
+                        android:textSize="@dimen/sp_default_14" />
+					<TextView
+					    android:id="@+id/new_version"
+                        android:layout_toLeftOf="@+id/iv1_versions"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="@dimen/dp_default_10"
+                         android:gravity="center_vertical"
+                         android:textColor="@color/red"
+                        android:layout_marginRight="@dimen/dp_default_5"
+                        android:textSize="@dimen/sp_default_14" />
+                    <ImageView
+                        android:id="@+id/iv1_versions"
+                        android:layout_marginRight="@dimen/dp_default_15"
+                        style="@style/WeiWeiRelativeMoreButtonStyle" />
+                </RelativeLayout>
+
+             	<View android:layout_width="match_parent" android:layout_height="1px" android:background="#f0f0f0"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_default_43"
+                    android:layout_margin="@dimen/dp_default_5"
+                    android:gravity="center_vertical" >
+
+                    <ImageView
+                        android:id="@+id/iv_about_us"
+                        android:layout_width="@dimen/dp_default_23"
+                        android:layout_height="@dimen/dp_default_20"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/setting_about_us" />
+
+                    <TextView
+                        android:id="@+id/tv_about_us"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="@dimen/dp_default_10"
+                        android:layout_toRightOf="@id/iv_about_us"
+                        android:gravity="center_vertical"
+                        android:text="关于我们"
+                        android:textSize="@dimen/sp_default_14" />
+
+                    <ImageView
+                        android:id="@+id/iv1_about_us"
+                        android:layout_marginRight="@dimen/dp_default_15"
+                        style="@style/WeiWeiRelativeMoreButtonStyle" />
+                </RelativeLayout>
+
+               
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+           android:layout_marginBottom="@dimen/dp_default_20"
+            android:layout_gravity="bottom"
+            android:orientation="vertical" 
+
+            >
+			 <LinearLayout 
+				     android:id="@+id/llll"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_default_40"
+                android:layout_marginTop="@dimen/dp_default_20"
+                android:weightSum="4"
+                android:gravity="center"
+               
+                 android:layout_alignParentBottom="true"
+                
+                >
+                            <Button
+                android:id="@+id/btn_exit"
+                android:layout_height="@dimen/dp_default_40"
+                android:textColor="@color/white"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:textSize="@dimen/sp_default_18"
+                 android:background="@drawable/add_cart_button_selector"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp_default_10"
+                android:text="退出当前账号" />
+                
+            </LinearLayout>
+            
+           
+
+			<LinearLayout 
+			   android:layout_below="@id/llll"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_default_40"
+                android:weightSum="4"
+                android:layout_marginTop="@dimen/dp_default_15"
+                android:gravity="center"
+               
+			    >
+			                <Button
+                android:id="@+id/btn_clear_cache"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="@dimen/dp_default_45"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/weiwei_gray_button"
+                android:text="清空缓存"
+                android:textSize="@dimen/sp_default_18"
+                android:visibility="invisible"
+                android:textColor="@color/gray_button_text_color" />
+			    
+			</LinearLayout>
+				
+            <View
+                android:id="@+id/settingBottom"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_default_20"
+                android:layout_gravity="bottom"
+                android:background="@color/transparent" 
+                android:visibility="gone"/>
+        </LinearLayout>
+    </RelativeLayout>

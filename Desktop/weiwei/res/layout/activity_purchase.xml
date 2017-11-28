@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+	<LinearLayout 
+	    android:layout_width="fill_parent"
+	    android:layout_height="40dp"
+	    android:orientation="horizontal"
+	    >
+	    <TextView 
+	       android:layout_width="wrap_content"
+	       android:layout_height="match_parent"
+	       android:text="据结束仅剩"
+	       android:gravity="center_vertical"
+	       android:textSize="15sp"
+	        />
+	    <TextView 
+	        android:id="@+id/tv_time"
+	       android:layout_width="wrap_content"
+	       android:layout_height="match_parent"
+	       android:text="02:34:53"
+	       android:gravity="center_vertical"
+	       android:textSize="22sp"
+	       android:textColor="@color/red"
+	       android:layout_marginLeft="10dp"
+	        />
+	</LinearLayout>
+	<com.handmark.pulltorefresh.library.PullToRefreshListView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/lv_purchase"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="#00000000"
+        android:divider="@color/super_light_gray"
+        android:dividerHeight="@dimen/home_list_dividerheight"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="false"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="true"
+        android:smoothScrollbar="true"
+       	ptr:ptrMode="both" >
+    </com.handmark.pulltorefresh.library.PullToRefreshListView>
+</LinearLayout>
+
+</RelativeLayout>

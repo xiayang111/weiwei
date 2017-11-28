@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <ImageView 
+        android:id="@+id/image"
+        android:layout_width="@dimen/dp_default_60"
+        android:layout_height="@dimen/dp_default_60"
+        android:layout_marginRight="@dimen/dp_default_10"
+        android:layout_marginLeft="@dimen/dp_default_10"
+        android:src="@drawable/shuiguo"
+        android:layout_gravity="center"
+        />
+	<TextView 
+	    android:id="@+id/tv_name"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_gravity="center"
+	    android:gravity="center"
+	    android:text="新鲜蔬菜"
+	    android:textSize="@dimen/sp_default_14"
+	    android:layout_marginTop="@dimen/dp_default_5"
+	    />
+</LinearLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/WeiWeiBaseBackgroundStyle"
+    android:orientation="vertical" >
+    
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        >          
+       <View style="@style/WeiWeiContentBorderStyle"/>
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+       
+        android:id="@+id/lv_footprint"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:dividerHeight="@dimen/attenion_list_dividerheight"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="false"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:smoothScrollbar="true"
+        android:minHeight="300dp"
+        ptr:ptrMode="pullDownFromTop"
+        android:scrollbars="none"
+        >
+    </com.handmark.pulltorefresh.library.PullToRefreshListView>
+   
+    </LinearLayout>   
+     
+	<LinearLayout 
+            android:id="@+id/ll_wrong"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_marginTop="10dp"
+            >
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/weiwei_search_wrong"
+                android:layout_marginRight="5dp"
+                />
+              <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="您还没有浏览任何商品"
+                android:textColor="@color/gray"
+                />
+            
+        </LinearLayout>
+</RelativeLayout>

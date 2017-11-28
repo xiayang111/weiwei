@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.dongwukj.weiwei.ui.widget.ExpandableScrollView xmlns:tools="http://schemas.android.com/tools"
+                                                    xmlns:android="http://schemas.android.com/apk/res/android"
+                                                    android:layout_width="fill_parent"
+                                                    android:layout_height="fill_parent"
+                                                    style="@style/WeiWeiBaseBackgroundStyle"
+                                                    android:descendantFocusability="blocksDescendants"
+                                                    android:orientation="vertical" >
+
+    <com.dongwukj.weiwei.ui.widget.BorderScrollView
+            android:id="@+id/detail_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/white"
+            android:divider="@null"
+             android:scrollbars="none"
+            android:footerDividersEnabled="true"
+            android:listSelector="@color/transparent" >
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/whitesmoke"
+                android:orientation="vertical" >
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical" >
+
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/banner_fragment_height" >
+
+                    <fragment
+                            android:id="@+id/product_detail_banner"
+                            android:name="com.dongwukj.weiwei.ui.fragment.BannerFragment"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/banner_fragment_height"
+                            tools:layout="@layout/banner_view" />
+
+                    <ImageButton
+                            android:id="@+id/fragment_product_detail_back_button"
+                            android:layout_width="60dp"
+                            android:background="@null"
+                            android:layout_marginTop="20dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:src="@drawable/weiwei_back_button" />
+                    <ImageButton
+                            android:id="@+id/shared"
+                            android:layout_width="50dp"
+                            android:layout_height="60dp"
+                            android:background="@null"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/weiwei_share_button"
+                            />
+                    <ImageButton
+                            android:id="@+id/attention"
+                            android:layout_width="50dp"
+                            android:layout_height="60dp"
+                            android:layout_toLeftOf="@id/shared"
+                            android:layout_alignParentBottom="true"
+                            android:background="@null"
+                            android:src="@drawable/weiwei_favorite_button"
+                            />
+                </RelativeLayout>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:orientation="vertical" >
+
+                    <TextView
+                            android:id="@+id/product_detail_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:ellipsize="end"
+                            android:lines="2"
+                            android:text=""
+                            android:textSize="18sp"
+                            android:gravity="center_vertical"
+                            android:textStyle="bold"
+                            android:paddingLeft="10dp"/>
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:paddingLeft="10dp" >
+
+                        <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical" >
+
+                            <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="4" >
+
+                                <TextView
+                                        android:id="@+id/product_detal_shopprice"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center"
+                                        android:text=""
+                                        android:textColor="@color/red"
+                                        android:textSize="17sp"
+                                        android:textStyle="bold" />
+
+                                <TextView
+                                        android:id="@+id/product_detail_marketprice"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="5dp"
+                                        android:gravity="center"
+                                        android:text="" />
+
+                                <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="5dp"
+                                        android:gravity="center"
+                                        android:text="会员价" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="3" >
+
+                                <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:text="规格:" />
+
+                                <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="5dp"
+                                        android:text="5斤装" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                        style="@style/WeiWeiContentBorderStyle"
+                        android:layout_marginLeft="10dp"/>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="5dp"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                    <TextView
+                            android:id="@+id/product_detail_salecountandship"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:text="" />
+
+                    <TextView
+                            android:id="@+id/product_detail_stockNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:text="" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white" >
+
+                <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingLeft="10dp" >
+
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="运送：湖北-武汉-洪山"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:textSize="12sp"
+                            android:lines="1"
+                            android:ellipsize="end"
+                            android:text="今天下单，预计明天上午12点前送达" />
+                </LinearLayout>
+
+
+                <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="修改"
+                        android:textColor="@color/red"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/weiwei_gray_button"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical" >
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:paddingLeft="10dp">
+
+                    <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/weiwei_search_button"
+                            android:layout_gravity="center_vertical"/>
+
+                    <TextView
+                            android:id="@+id/product_detail_query_suyuan"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:gravity="center|left"
+                            android:text="溯源查询"
+                            android:textSize="14sp"/>
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textColor="@color/lightgray"
+                            android:background="@drawable/weiwei_more"
+                            android:layout_marginRight="15dp"
+                            />
+                </LinearLayout>
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/lightgray" />
+
+                <LinearLayout
+                        android:id="@+id/ll_evaluate"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:paddingLeft="10dp">
+
+                    <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/weiwei_icon7"
+                            android:layout_gravity="center_vertical"/>
+
+                    <TextView
+                            android:id="@+id/product_detail_comment_header"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:gravity="center|left"
+                            android:textSize="14sp"
+                            android:text="商品评价(16700人评论90%好评)" />
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textColor="@color/lightgray"
+                            android:layout_marginRight="15dp"
+                            android:background="@drawable/weiwei_more" />
+                </LinearLayout>
+
+                <com.dongwukj.weiwei.ui.widget.SubListView
+                    android:scrollbars="none"
+                        android:id="@+id/product_detail_comment_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+                </com.dongwukj.weiwei.ui.widget.SubListView>
+                
+            </LinearLayout>
+        </LinearLayout>
+    </com.dongwukj.weiwei.ui.widget.BorderScrollView>
+
+    <View
+            android:id="@+id/expandable_scroll_divider"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/detail_layout"
+            android:background="@color/white" />
+
+    <com.dongwukj.weiwei.ui.widget.BorderScrollView
+            android:id="@+id/more_detail"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/expandable_scroll_divider"
+             android:scrollbars="none"
+            android:visibility="invisible" >
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" >
+
+            <RadioGroup
+                    android:id="@+id/tabs_rg"
+                    android:layout_width="fill_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="7dp"
+                    android:paddingTop="7dp" >
+
+                <RadioButton
+                        android:id="@+id/tab_rb_a"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/selector_tab"
+                        android:button="@null"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="图文详情"
+                        android:textColor="#000000"
+                        android:textSize="13sp" />
+
+                <RadioButton
+                        android:id="@+id/tab_rb_b"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/selector_tab"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="规格参数"
+                        android:textColor="#000000"
+                        android:textSize="13sp" />
+            </RadioGroup>
+
+            <FrameLayout
+                    android:id="@+id/product_detail_tab_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+        </LinearLayout>
+    </com.dongwukj.weiwei.ui.widget.BorderScrollView>
+
+
+</com.dongwukj.weiwei.ui.widget.ExpandableScrollView>

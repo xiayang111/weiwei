@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+    <TextView
+            android:id="@+id/classify_left_lv_item_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp_default_15"
+            android:textColor="@color/right_category_text_color"
+            />
+    <com.dongwukj.weiwei.ui.widget.FullSizeGridView
+            android:id="@+id/classify_left_lv_item_grid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numColumns="3"
+            android:layout_marginTop="@dimen/dp_default_15"
+            android:layout_marginBottom="@dimen/dp_default_15"
+            android:listSelector="@color/transparent"
+            android:overScrollMode="never"
+            android:fadingEdge="none"
+            android:scrollbars="none"
+            android:cacheColorHint="@color/transparent"
+            android:horizontalSpacing="10dp"
+            android:verticalSpacing="@dimen/dp_default_15">
+
+    </com.dongwukj.weiwei.ui.widget.FullSizeGridView>
+</LinearLayout>

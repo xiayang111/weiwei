@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/transparent" />
+  	<corners android:topRightRadius="@dimen/dp_default_5"
+  	     android:bottomRightRadius="@dimen/dp_default_5"/>
+    <stroke
+            android:width="@dimen/dp_default_1"
+            android:color="@color/left_category_select_text_color" />
+</shape>

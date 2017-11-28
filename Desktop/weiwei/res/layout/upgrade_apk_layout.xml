@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:background="@drawable/weiwei_base_text_bg"
+        >
+	  <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textSize="24sp"
+        android:text="版本更新"
+        android:gravity="center"
+        
+        />
+    <View style="@style/WeiWeiContentBorderStyleNew"/>
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        >
+        <TextView
+            android:id="@+id/progressCount_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/red"
+            android:textSize="14dip"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            />
+
+    <ProgressBar
+            android:id="@+id/progressbar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            />
+    </LinearLayout>
+    <LinearLayout 
+        android:id="@+id/ll_install"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        >
+    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#f0f0f0"/>
+     <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+    <TextView 
+        android:id="@+id/tv_ok"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="安装"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:textColor="@color/dialog_queren"
+        />
+    
+            <TextView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#f0f0f0" />
+    
+    <TextView 
+        android:id="@+id/tv_cancel"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:text="取消"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:textSize="16sp"
+        android:textColor="@color/dialog_queren"
+        />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

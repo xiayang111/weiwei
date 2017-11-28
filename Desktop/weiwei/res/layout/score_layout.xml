@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/zp"
+        android:layout_width="wrap_content"
+        android:layout_height="165dp"
+        android:background="@drawable/weiwei_jifen"
+         />
+
+<!--     <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/score_ll_margintop"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/ll_sign"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/score1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="33dp"
+                android:layout_marginTop="30dp"
+                android:text="@string/score_sign"
+                android:textColor="@color/darkorange"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="5dp"
+                android:text="@string/score_sign_detail"
+                android:textColor="@color/darkorange" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_raffle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/score2"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="30dp"
+                android:text="抽大奖"
+                android:textColor="@color/steelblue"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="17dp"
+                android:text="神秘大礼包"
+                android:textColor="@color/steelblue" />
+        </LinearLayout>
+    </LinearLayout> -->
+    
+    <LinearLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        >
+        <ImageView 
+            android:id="@+id/iv_sign"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:src="@drawable/weiwei_sign"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            />
+        
+        <ImageView 
+            android:id="@+id/iv_lottery"
+           android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:src="@drawable/weiwei_lottery"
+             android:layout_marginRight="10dp"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="40dp"
+        android:text="游戏规则:\n1.每天只能签到一次,签到只能送5分积分\n2.活动面向所有惟惟用户\n3.贪吃蛇游戏积分越高,回馈积分越高"
+        android:textSize="15sp" />
+
+</LinearLayout>

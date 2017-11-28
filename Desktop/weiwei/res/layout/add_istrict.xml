@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/WeiWeiBaseBackgroundStyle"
+    android:orientation="vertical" >
+    
+	<TextView 
+	    android:id="@+id/tv_region"
+	    android:layout_width="match_parent"
+	    android:layout_height="@dimen/dp_default_40"
+	    android:layout_marginTop="@dimen/dp_default_40"
+	    android:layout_marginBottom="@dimen/dp_default_5"
+	    android:textSize="@dimen/sp_default_18"
+	    android:text="请选择您所在的区域"
+	    android:gravity="center_vertical"
+	    android:layout_marginLeft="@dimen/dp_default_10"
+	    android:paddingLeft="@dimen/dp_default_15"
+	    android:textColor="#7c7c7c"
+	    />
+	<RelativeLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    >
+	    <ListView 
+	    android:id="@+id/lv_plot"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginRight="@dimen/dp_default_10"
+	    android:layout_marginLeft="@dimen/dp_default_10"
+	    android:layout_marginBottom="@dimen/dp_default_10"
+	    android:layout_marginTop="@dimen/dp_default_5"
+	    android:visibility="gone"
+	    android:divider="#f0f0f0"
+	    android:dividerHeight="@dimen/px_default_1"
+	    android:background="@drawable/weiwei_base_text_bg"
+	    ></ListView>
+	      <ListView 
+	    android:id="@+id/lv"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginRight="@dimen/dp_default_10"
+	    android:layout_marginLeft="@dimen/dp_default_10"
+	    android:layout_marginBottom="@dimen/dp_default_10"
+	    android:layout_marginTop="@dimen/dp_default_5"
+	    android:visibility="gone"
+	     android:divider="#f0f0f0"
+	    android:dividerHeight="@dimen/px_default_1"
+	    android:background="@drawable/weiwei_base_text_bg"
+	    ></ListView>
+	</RelativeLayout>
+	
+</LinearLayout>

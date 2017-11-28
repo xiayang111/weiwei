@@ -1,0 +1,748 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/weiwei_background_color"
+        android:descendantFocusability="blocksDescendants"
+        android:fillViewport="true" 
+        android:scrollbars="none"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <View
+                style="@style/WeiWeiContentBorderStyle"
+                android:layout_marginTop="@dimen/dp_default_10" />
+
+            <RelativeLayout
+                android:id="@+id/address"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_default_60"
+                android:background="@color/weiwei_content_background_color"
+                android:padding="@dimen/dp_default_10" >
+
+                <LinearLayout
+                    android:id="@+id/confirm_order_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/confirm_order_address_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="张沫沫  1234567890"
+                        android:textColor="#191919"
+                        android:textSize="@dimen/sp_default_14" />
+
+                    <TextView
+                        android:id="@+id/confirm_order_address_detail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:lines="1"
+                        android:text="武汉市东湖区"
+                        android:textColor="#646464"
+                        android:textSize="@dimen/sp_default_14" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/iv_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/weiwei_more" />
+                
+               <ImageView
+                   android:layout_toLeftOf="@id/iv_more"
+                   android:layout_marginRight="10dp"
+                    android:layout_width="@dimen/dp_default_16"
+                    android:layout_height="@dimen/dp_default_16"
+                    android:layout_centerVertical="true"
+                    android:visibility="gone"
+                    android:src="@drawable/weiwei_reminder" />
+
+                <LinearLayout
+                    android:id="@+id/confirm_order_add_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:visibility="visible" 
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:id="@+id/confirm_order_add_address_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="请提供您的具体地址"
+                        android:textColor="@color/right_category_text_color"
+                        android:textSize="@dimen/sp_default_15" />
+                    <LinearLayout 
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+                        
+                     <ImageView 
+                         android:layout_width="@dimen/dp_default_16"
+                         android:layout_height="@dimen/dp_default_16"
+                         android:src="@drawable/weiwei_set_loucation"
+                         android:layout_gravity="center_vertical"
+                         android:layout_marginRight="@dimen/dp_default_3"
+                         />
+                    <TextView 
+                        android:id="@+id/tv_loucation_order"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="武汉市东湖区光谷大道150号"
+                        android:textColor="@color/order_editext_hint_color"
+                        android:gravity="clip_vertical"
+
+                        />
+                    
+                    </LinearLayout>
+                    
+                </LinearLayout>
+                <RelativeLayout 
+                    android:id="@+id/address_progress"
+                    android:layout_height="match_parent" android:layout_width="match_parent"
+                    android:background="@color/white">
+                    <ProgressBar  android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"/>
+                </RelativeLayout>
+                
+            </RelativeLayout>
+
+            <View style="@style/WeiWeiContentBorderStyle" />
+            <!--
+            <com.dongwukj.weiwei.ui.widget.ParentCartListView
+                    xmlns:mode="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/parent_confirm_order_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="200dp"
+                    android:dividerHeight="2dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/weiwei_content_background_color"
+                    mode:layoutMode="stretch"
+                    >
+
+            </com.dongwukj.weiwei.ui.widget.ParentCartListView>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/weiwei_content_background_color">
+                <TextView
+                        android:id="@+id/confirm_order_cart_total_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="共3件商品  合计：￥32.05"
+                        android:gravity="right"
+                        android:layout_marginRight="10dp"/>
+            </LinearLayout>
+            -->
+
+            <View
+                style="@style/WeiWeiContentBorderStyle"
+                android:layout_marginTop="@dimen/dp_default_10" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/weiwei_content_background_color"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/dp_default_10" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/dp_default_5"
+                        android:paddingTop="@dimen/dp_default_5"
+                        android:text="配送信息"
+                        android:textColor="#191919"
+                        android:textSize="@dimen/sp_default_20" />
+
+                    <View style="@style/WeiWeiContentBorderStyle" />
+                    <!--
+                    <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="运费"
+                            />
+                    <TextView
+                            android:id="@+id/confirm_order_ship_amount"
+                            android:text="￥10.0"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    -->
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/dp_default_5"
+                        android:paddingTop="@dimen/dp_default_5" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="运费"
+                            android:textColor="#646464"
+                            android:textSize="@dimen/sp_default_16" />
+
+                        <TextView
+                            android:id="@+id/confirm_order_ship_amount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="@dimen/dp_default_10"
+                            android:layout_marginRight="@dimen/dp_default_10"
+                           android:textColor="#7c7c7c"
+                            android:textSize="@dimen/sp_default_16" />
+                    </RelativeLayout>
+
+                    <View style="@style/WeiWeiContentBorderStyle" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/dp_default_5"
+                        android:paddingTop="@dimen/dp_default_5" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="配送时间"
+                            android:textColor="#646464"
+                            android:textSize="@dimen/sp_default_16" />
+						<ImageView
+                            android:id="@+id/img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/dp_default_10"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/weiwei_more" />
+                         <TextView
+                            android:id="@+id/send_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toLeftOf="@id/img"
+                           android:layout_marginRight="@dimen/dp_default_5"
+                            android:textColor="#7c7c7c"
+                            android:layout_centerVertical="true"
+                            android:textSize="@dimen/sp_default_12" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View style="@style/WeiWeiContentBorderStyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp_default_10"
+                android:background="@color/white"
+                android:orientation="vertical" >
+
+                <View style="@style/WeiWeiContentBorderStyle" />
+
+                <EditText
+                    android:id="@+id/confirm_order_buyer_remark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_default_10"
+                    android:background="@drawable/weiwei_evaluate_edittext_item"
+                    android:hint="备注:"
+                    android:maxLines="3"
+                    android:minEms="80"
+                    android:minLines="1"
+                    android:padding="@dimen/dp_default_10"
+                    android:textColorHint="@color/order_editext_hint_color"
+                    android:textSize="@dimen/sp_default_14" />
+
+                <View style="@style/WeiWeiContentBorderStyle" />
+            </LinearLayout>
+
+            <LinearLayout
+                
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_default_10"
+                android:orientation="vertical" >
+
+                <View style="@style/WeiWeiContentBorderStyle" />
+
+                <RelativeLayout
+                    android:id="@+id/confirm_order_valid_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_default_58"
+                    android:background="@color/white" >
+
+                    <TextView
+                        
+                        android:id="@+id/tv_coupon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/dp_default_10"
+                        android:gravity="center_vertical"
+                        android:text="优惠券"
+                        android:textColor="#191919"
+                        android:textSize="@dimen/sp_default_20" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/dp_default_10"
+                        android:src="@drawable/weiwei_pulldown_button" />
+                </RelativeLayout>
+
+                <View style="@style/WeiWeiContentBorderStyle" />
+                <LinearLayout 
+                    android:id="@+id/ll_coupon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    
+                    android:orientation="vertical"
+                    >
+                    <com.dongwukj.weiwei.ui.widget.MyListView
+                        android:id="@+id/lv_coupon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none"
+                    android:paddingLeft="@dimen/dp_default_10">
+                    
+                </com.dongwukj.weiwei.ui.widget.MyListView>
+                  <View style="@style/WeiWeiContentBorderStyle" />
+                </LinearLayout>
+              
+            </LinearLayout>
+
+            <!-- <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical" >
+
+                <View style="@style/WeiWeiContentBorderStyle" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:background="@color/white" >
+
+                    <TextView
+                        android:id="@+id/tv1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical"
+                        android:text="积分"
+                        android:textColor="#191919"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/confirm_order_user_credits_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/tv1"
+                        android:gravity="center_vertical"
+                        android:text="可用85积分"
+                        android:textColor="#bbbbbb"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/confirm_order_user_credits_used_edit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="请输入积分"
+                        android:phoneNumber="true"
+                        android:textColor="#e90000"
+                        android:textColorHint="#bbbbbb" />
+                </RelativeLayout>
+
+                <View style="@style/WeiWeiContentBorderStyle" />
+            </LinearLayout> -->
+
+            <LinearLayout
+            
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_default_10"
+                android:orientation="vertical" >
+
+                <View style="@style/WeiWeiContentBorderStyle" />
+
+                <RelativeLayout
+                        android:id="@+id/confirm_order_change_payment"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_default_58"
+                    android:background="@color/white" >
+
+                    <TextView
+                        android:id="@+id/confirm_order_payment_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/dp_default_10"
+                        android:gravity="center_vertical"
+                        android:text="选择支付方式(默认余额支付)"
+                        android:textColor="#191919"
+                        android:textSize="@dimen/sp_default_20" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/dp_default_10"
+                        android:src="@drawable/weiwei_more" 
+                        
+                        />
+                </RelativeLayout>
+
+                <View
+                    style="@style/WeiWeiContentBorderStyle"
+                    android:layout_marginLeft="@dimen/dp_default_10" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_default_58"
+                    android:background="@color/white" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/dp_default_10"
+                        android:gravity="center_vertical"
+                        android:text="账户余额"
+                        android:textColor="#191919"
+                        android:textSize="@dimen/sp_default_20" />
+
+                    <TextView
+                        android:id="@+id/tv_yue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/dp_default_10"
+                        android:gravity="center_vertical"
+                        android:text="￥88.00"
+                        android:textColor="#7c7c7c"
+                        android:textSize="@dimen/sp_default_15" />
+                </RelativeLayout>
+
+                <View style="@style/WeiWeiContentBorderStyle" />
+            </LinearLayout>
+
+            <View
+                style="@style/WeiWeiContentBorderStyle"
+                android:layout_marginTop="@dimen/dp_default_10" />
+
+            <com.dongwukj.weiwei.ui.widget.ParentCartListView
+                xmlns:mode="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/parent_confirm_order_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/weiwei_content_background_color"
+                android:divider="@null"
+                android:scrollbars="none"
+                android:dividerHeight="0dp"
+                android:minHeight="@dimen/dp_default_200"
+                mode:layoutMode="stretch" >
+            </com.dongwukj.weiwei.ui.widget.ParentCartListView>
+
+            <View
+                style="@style/WeiWeiContentBorderStyle"
+                android:layout_marginTop="@dimen/dp_default_fu1.5" />
+            <!--
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/weiwei_content_background_color"
+                    android:orientation="vertical">
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:gravity="center_vertical"
+                        android:text="促销规则"
+                        android:textStyle="bold"
+                        android:textSize="18sp"/>
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/weiwei_background_color"/>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:orientation="vertical">
+
+
+                    <LinearLayout android:layout_width="match_parent"
+                                  android:layout_height="match_parent"
+                            android:orientation="vertical">
+                            <TextView
+                                    android:id="@+id/confirm_order_user_credits_text"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="可用积分12，本次可用12"/>
+                        <LinearLayout android:layout_width="match_parent"
+                                      android:layout_height="match_parent">
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="本次使用的积分为"
+                                    android:gravity="center_vertical"
+                                    />
+                            <EditText
+                                    android:id="@+id/confirm_order_user_credits_used_edit"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="0"
+                                    android:inputType="number"
+
+                                    />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/weiwei_background_color"/>
+
+
+            </LinearLayout>
+            -->
+            <!--
+            <LinearLayout
+                    android:id="@+id/confirm_order_change_payment"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/weiwei_content_background_color">
+                <TextView
+                        android:id="@+id/confirm_order_payment_text"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:text="选择支付方式"/>
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_launcher"/>
+            </LinearLayout>
+            -->
+
+
+            <!--
+            <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/weiwei_content_background_color"
+                    android:orientation="vertical">
+                 <TextView
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:text="买家留言:"/>
+                <EditText
+                        android:id="@+id/confirm_order_buyer_remark"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="60dp"
+                         />
+
+            </LinearLayout>
+            -->
+
+        </LinearLayout>
+    </ScrollView>
+
+    <View style="@style/WeiWeiContentBorderStyle" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_default_50"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dp_default_10" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="金额:"
+                android:textColor="@color/right_category_grid_text_color"
+                android:textSize="@dimen/sp_default_14" />
+
+            <TextView
+                android:id="@+id/confirm_order_cart_total_price"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textColor="@color/red"
+                android:textSize="@dimen/sp_default_14" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="折扣:"
+                android:textColor="@color/right_category_grid_text_color"
+                android:textSize="@dimen/sp_default_14" />
+
+            <TextView
+                android:id="@+id/tv_discount"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="￥0.00"
+                android:textColor="#23ac38"
+                android:textSize="@dimen/sp_default_14" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="运费:"
+                android:textColor="@color/right_category_grid_text_color"
+                android:textSize="@dimen/sp_default_14" />
+
+            <TextView
+                android:id="@+id/tv_freight"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textColor="#ff9a00"
+                 android:text="￥0.00"
+                android:textSize="@dimen/sp_default_14" />
+        </LinearLayout>
+
+        
+    </LinearLayout>
+
+    <View style="@style/WeiWeiContentBorderStyle" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_default_50"
+        android:background="@color/white"
+        android:gravity="center_vertical" >
+		<LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+              android:paddingLeft="@dimen/dp_default_10"  >
+
+            <TextView
+                android:id="@+id/tv_payment"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="合计:"
+                android:textColor="@color/right_category_grid_text_color"
+                android:textSize="@dimen/sp_default_14" />
+
+            <TextView
+                android:id="@+id/confirm_order_total_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textColor="@color/red"
+                android:textSize="@dimen/sp_default_14"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <Button
+            android:id="@+id/confirm_order_submit_button"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_default_40"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/dp_default_10"
+            android:layout_marginRight="@dimen/dp_default_10"
+            android:background="@drawable/weiwei_button_orange_fill"
+            android:focusable="true"
+            android:padding="@dimen/dp_default_10"
+            android:text="提交订单"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_default_14" 
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+    <!--
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/weiwei_content_background_color">
+        <TextView
+                android:id="@+id/confirm_order_total_amount"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="合计：￥23.0"
+                android:gravity="center_vertical|right"
+                android:layout_marginRight="10dp"
+                />
+        <Button
+                android:id="@+id/confirm_order_submit_button"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="提交"
+                android:background="@color/main_color"
+                android:layout_margin="5dp"
+                />
+    </LinearLayout>
+    -->
+
+</LinearLayout>

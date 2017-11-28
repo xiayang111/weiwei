@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f0f0f0"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_default_140"
+        android:background="@drawable/weiwei_base_text_bg_for_recharge"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="卡号:"
+                    android:textSize="@dimen/sp_default_18" />
+
+                <EditText
+                    android:id="@+id/et_cardnum"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/dp_default_10"
+                    android:layout_marginRight="@dimen/dp_default_20"
+                    android:layout_marginTop="@dimen/dp_default_10"
+                    android:layout_weight="3"
+                    android:paddingLeft="@dimen/dp_default_3"
+                    android:phoneNumber="true"
+                    android:maxLength="9"
+                    android:singleLine="true"
+                    android:numeric="integer"
+                    android:background="@drawable/weiwei_edittext_gray_transparency" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="密码:"
+                    android:textSize="@dimen/sp_default_18" />
+
+                <EditText
+                    android:id="@+id/et_password"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/dp_default_10"
+                    android:layout_marginRight="@dimen/dp_default_20"
+                    android:layout_marginTop="@dimen/dp_default_10"
+                    android:layout_weight="3"
+                    android:phoneNumber="true"
+                    android:numeric="integer"
+                    android:password="true"
+                     android:paddingLeft="@dimen/dp_default_3"
+                     android:singleLine="true"
+                    android:background="@drawable/weiwei_edittext_gray_transparency" />
+            </LinearLayout>
+        </LinearLayout>
+
+       
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/bt_true"
+        style="@style/WeiWeiBaseYellowButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/dp_default_25"
+        android:layout_marginRight="@dimen/dp_default_25"
+        android:layout_marginTop="@dimen/dp_default_60"
+        android:text="立即充值"
+        android:textSize="@dimen/sp_default_18"
+        />
+	<View
+                android:id="@+id/settingBottom"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_default_20"
+                android:layout_gravity="bottom"
+                android:background="@color/transparent" />
+</LinearLayout>

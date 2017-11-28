@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_default_85"
+    android:minHeight="@dimen/dp_default_85"
+    android:orientation="vertical"
+        android:background="@color/weiwei_content_background_color">
+    <ImageView 
+        android:id="@+id/img"
+        android:layout_width="@dimen/dp_default_60"
+        android:layout_height="@dimen/dp_default_60"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_launcher"
+        />
+	<TextView 
+	    android:id="@+id/tv"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:background="@android:color/white"
+	    android:textSize="@dimen/category_gridview_item_text_size"
+        android:textColor="@color/right_category_grid_text_color"
+	    android:gravity="center"
+        android:layout_marginTop="@dimen/dp_default_10"
+	    />
+</LinearLayout>

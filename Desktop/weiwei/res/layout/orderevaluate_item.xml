@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@color/white"
+    android:padding="10dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp" >
+
+        <ImageView
+            android:id="@+id/iv_ordericon"
+            android:layout_width="85dp"
+            android:layout_height="75dp"
+            android:src="@drawable/default_small" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:orientation="vertical" >.
+
+            <TextView
+                android:id="@+id/tv_ordername"
+                android:layout_width="match_parent"
+                android:layout_height="22dp"
+                android:gravity="center_vertical"
+                android:textSize="18sp"
+               />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="规格: "
+                    android:textColor="@color/gray"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_weight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/gray"
+                    android:textSize="14sp"
+                  />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_orderprice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+                   
+                    android:textColor="@color/gray"
+                    android:textSize="14sp" />
+			</LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+   
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:text="描述相符"
+            android:textSize="16sp" />
+
+        <RatingBar
+            android:id="@+id/start"
+            style="@style/roomRatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:numStars="5"
+            android:focusable="false"
+            android:rating="5.0"
+            />
+    </LinearLayout>
+	<EditText
+	    android:id="@+id/et"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:maxLines="3" 
+	    android:minLines="3"
+	    android:minEms="100"
+	    android:hint="满分好评"
+	    android:padding="5dp"
+	    android:textSize="12sp"
+	   android:background="@drawable/weiwei_evaluate_edittext_item"
+	    />
+	 
+	
+</LinearLayout>

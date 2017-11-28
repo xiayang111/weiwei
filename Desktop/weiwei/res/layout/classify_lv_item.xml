@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/dp_default_43"
+        android:minHeight="@dimen/dp_default_43"
+        android:background="@color/left_list_content_color">
+    <ImageView
+            android:id="@+id/classify_lv_item_img"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_default_60"
+            android:layout_weight="1"
+            android:src="@drawable/ic_launcher"
+            android:visibility="gone"/>
+    <TextView
+            android:id="@+id/classify_lv_item_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="分类"
+            android:textSize="@dimen/sp_default_15"
+            android:textColor="@color/left_category_text_color"
+            android:lines="1"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:layout_centerInParent="true"/>
+    <ImageView
+            android:id="@+id/classify_lv_item_check_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/weiwei_category_sanjiao"
+            android:layout_centerVertical="true"
+            android:visibility="visible"
+            android:layout_alignParentRight="true"/>
+</RelativeLayout>

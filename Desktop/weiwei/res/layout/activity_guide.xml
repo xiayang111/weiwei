@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<android.support.v4.view.ViewPager 
+    android:id="@+id/vp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" />
+<Button 
+    android:id="@+id/bt"
+    android:layout_width="@dimen/dp_default_90"
+    android:layout_height="@dimen/dp_default_45"
+    android:text="@string/viewpager_complete"
+    android:textColor="@color/white"
+    android:textSize="@dimen/sp_default_16"
+    android:layout_alignParentBottom="true"
+    android:layout_centerHorizontal="true"
+    android:layout_marginBottom="@dimen/dp_default_50"
+    android:background="@drawable/weiwei_guide"
+  	android:visibility="gone"
+    />
+</RelativeLayout>

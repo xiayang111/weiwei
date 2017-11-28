@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/weiwei_content_background_color"
+              android:paddingTop="@dimen/dp_default_15"
+              android:paddingLeft="@dimen/dp_default_22"
+              android:paddingRight="@dimen/dp_default_22">
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+            xmlns:ptr="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/left_lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:listSelector="@color/weiwei_content_background_color"
+            android:background="@color/weiwei_content_background_color"
+            android:overScrollMode="never"
+            android:fadingEdge="none"
+            android:scrollbars="none"
+            android:cacheColorHint="@color/weiwei_content_background_color"
+            ptr:ptrMode="disabled"
+            />
+</LinearLayout>

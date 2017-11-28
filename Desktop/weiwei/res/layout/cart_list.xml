@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/WeiWeiBaseBackgroundStyle"
+    android:orientation="vertical" >
+
+    <RelativeLayout style="@style/WeiWeiHeaderBarBaseStyle" >
+
+        <TextView
+            style="@style/WeiWeiHeaderBarBaseStyle_Title"
+            android:text="购物车" />
+
+        <Button
+            android:id="@+id/cart_edit_button"
+            style="@style/WeiWeiHeaderBarBaseStyle_Right"
+            android:background="@color/transparent"
+            android:tag="0"
+            android:text="编辑"
+            android:visibility="invisible" />
+
+        <LinearLayout
+            android:id="@+id/ll_left"
+            android:layout_width="@dimen/dp_default_40"
+            android:layout_height="@dimen/dp_default_40"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_default_10"
+            android:gravity="center"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/list_header_leftbutton"
+                style="@style/WeiWeiHeaderBarBaseStyle_Left" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/weiwei_background_color" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="visible" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/rl_fullcut"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/dp_default_10"
+                    android:paddingTop="@dimen/dp_default_10" >
+
+                    <TextView
+                        android:id="@+id/manjian"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dp_default_5"
+                        android:background="@drawable/weiwei_button_green_fill"
+                        android:padding="@dimen/dp_default_3"
+                        android:text="满减"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/tv_fullcut_one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dp_default_10"
+                        android:layout_toRightOf="@id/manjian"
+                        android:textSize="@dimen/sp_default_14" />
+
+                    <TextView
+                        android:id="@+id/tv"
+                        android:layout_width="@dimen/dp_default_12"
+                        android:layout_height="@dimen/dp_default_12"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dp_default_2"
+                        android:layout_marginRight="@dimen/dp_default_10"
+                        android:background="@drawable/wenhao"
+                        android:textColor="#8fc320"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_fullcut_two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@id/tv"
+                        android:text="满减规则"
+                        android:textColor="#7c7c7c"
+                        android:textSize="@dimen/sp_default_14" />
+                </RelativeLayout>
+
+                <com.fortysevendeg.swipelistview.SwipeListView
+                    xmlns:swipe="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/lv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_default_5"
+                    android:layout_marginLeft="@dimen/dp_default_5"
+                    android:layout_marginRight="@dimen/dp_default_5"
+                    android:layout_marginTop="@dimen/dp_default_5"
+                    android:background="@drawable/weiwei_base_text_bg"
+                    android:divider="#f0f0f0"
+                    android:dividerHeight="@dimen/dp_default_1"
+                    android:fadingEdge="none"
+                    android:footerDividersEnabled="false"
+                    android:headerDividersEnabled="false"
+                    android:overScrollMode="never"
+                    android:paddingBottom="@dimen/dp_default_5"
+                    android:paddingTop="@dimen/dp_default_5"
+                    android:scrollbars="none"
+                    swipe:swipeActionLeft="reveal"
+                    swipe:swipeBackView="@+id/id_back"
+                    swipe:swipeCloseAllItemsWhenMoveList="true"
+                    swipe:swipeFrontView="@+id/front"
+                    swipe:swipeMode="left"
+                    swipe:swipeOffsetLeft="@dimen/dp_default_220"
+                    swipe:swipeOpenOnLongPress="false" >
+                </com.fortysevendeg.swipelistview.SwipeListView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_default_5"
+                    android:layout_marginRight="@dimen/dp_default_5"
+                    android:background="@drawable/weiwei_base_text_bg_for_shopcart"
+                    android:minHeight="@dimen/dp_default_5"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
+
+                    <LinearLayout
+                        android:id="@+id/ll_fullcut_message"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone" >
+
+                        <View
+                            style="@style/WeiWeiContentBorderStyleNew"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:id="@+id/tv_fullcut_message"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="@dimen/dp_default_10"
+                            android:gravity="right|center_vertical"
+                            android:paddingBottom="@dimen/dp_default_5"
+                            android:paddingTop="@dimen/dp_default_5"
+                            android:text="满减"
+                            android:textSize="@dimen/sp_default_18"
+                            android:visibility="visible" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_default_60"
+                android:background="@color/weiwei_header_content_color"
+                android:gravity="center_vertical" >
+
+                <LinearLayout
+                    android:id="@+id/cart_pay_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_default_50"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center_vertical"
+                    android:visibility="visible" >
+
+                    <LinearLayout
+                        android:layout_width="@dimen/dp_default_25"
+                        android:layout_height="@dimen/dp_default_25"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/dp_default_5"
+                        android:padding="@dimen/dp_default_3" >
+
+                        <CheckBox
+                            android:id="@+id/cb_select"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/car_check_selector"
+                            android:button="@null"
+                            android:checked="false" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_default_2"
+                        android:text="全选"
+                        android:textSize="@dimen/sp_default_18" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" >
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dp_default_15"
+                                android:gravity="center_vertical"
+                                android:text="商品金额："
+                                android:textSize="@dimen/sp_default_18" />
+
+                            <TextView
+                                android:id="@+id/parent_cart_total_amount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dp_default_2"
+                                android:layout_marginRight="@dimen/dp_default_10"
+                                android:text="￥12.0"
+                                android:textColor="@color/red"
+                                android:textSize="@dimen/sp_default_18"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:visibility="gone"
+                            android:layout_weight="1" >
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dp_default_15"
+                                android:gravity="center_vertical"
+                                android:text="余额支付："
+                                android:textSize="@dimen/sp_default_18" />
+
+                            <TextView
+                                android:id="@+id/balance_total_amount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dp_default_2"
+                                android:layout_marginRight="@dimen/dp_default_10"
+                                android:text="￥12.0"
+                                android:textColor="@color/red"
+                                android:textSize="@dimen/sp_default_18"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/dp_default_5"
+                        android:gravity="right|center_vertical" >
+
+                        <Button
+                            android:id="@+id/parent_cart_submit_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/add_cart_button_selector"
+                            android:text="结算(99)"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/sp_default_16" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/cart_delete_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_default_50"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/dp_default_5"
+                    android:visibility="gone" >
+
+                    <LinearLayout
+                        android:layout_width="@dimen/dp_default_22"
+                        android:layout_height="@dimen/dp_default_22"
+                        android:layout_gravity="center_vertical"
+                        android:padding="@dimen/dp_default_3" >
+
+                        <CheckBox
+                            android:id="@+id/cb_delete"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/car_check_selector"
+                            android:button="@null"
+                            android:checked="false" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_default_5"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="全选"
+                        android:textSize="@dimen/sp_default_18" />
+
+                    <Button
+                        android:id="@+id/cart_delete_button"
+                        style="@style/WeiWeiBaseYellowButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="删除" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/parent_cart_empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/weiwei_background_color"
+            android:clickable="true"
+            android:visibility="gone" >
+
+            <!--
+                <TextView
+                    android:id="@+id/parent_cart_empty_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="购物车为空"
+                    android:visibility="gone"/>
+            -->
+
+            <LinearLayout
+                android:id="@+id/parent_cart_empty_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/weiwei_gouwuche_button" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dp_default_22"
+                    android:text="购物车是空的，赶紧去挑选美食吧"
+                    android:textColor="@color/pro_guige"
+                    android:textSize="@dimen/sp_default_18" />
+
+                <Button
+                    android:id="@+id/bt_food"
+                    android:layout_width="@dimen/dp_default_85"
+                    android:layout_height="@dimen/dp_default_42"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dp_default_42"
+                    android:background="@drawable/weiwei_search_border_img"
+                    android:text="挑美食"
+                    android:textColor="#999999"
+                    android:textSize="@dimen/sp_default_16" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/jiazai"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:gravity="center"
+            android:visibility="gone"
+            android:orientation="vertical" >
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_default_10"
+                android:text="数据读取中，请稍后..."
+                android:textColor="#7c7c7c" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollview_setting"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/weiwei_background_color"
+    android:scrollbars="none" >
+
+    <RelativeLayout
+        android:id="@+id/rl_setting_content"
+        style="@style/WeiWeiBaseBackgroundStyle" >
+
+        <LinearLayout
+            android:id="@+id/ll_new_address"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+          
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_default_5"
+                    android:paddingLeft="@dimen/dp_default_5"
+                    android:background="@drawable/weiwei_base_text_bg"
+                    android:orientation="vertical" >
+
+                    <LinearLayout style="@style/WeiWeiAddressLinear" >
+
+                        <TextView
+                            style="@style/WeiWeiAddressBase.Text"
+                            android:text="收 货 人" />
+
+                        <EditText
+                            android:id="@+id/et_name"
+                            style="@style/WeiWeiAddressBase.Edit"
+                            android:hint="请输入您的姓名"
+                            android:paddingLeft="@dimen/dp_default_3"
+                            android:layout_height="@dimen/dp_default_40"
+                             android:layout_marginRight="@dimen/dp_default_5"
+                          	android:background="@drawable/weiwei_edittext_gray_transparency"
+                            android:maxLength="10" 
+                           />
+                    </LinearLayout>
+
+                    <View android:layout_width="match_parent" android:layout_height="@dimen/px_default_1"
+                        android:background="#f0f0f0" />
+
+                    <LinearLayout style="@style/WeiWeiAddressLinear" >
+
+                        <TextView
+                            style="@style/WeiWeiAddressBase.Text"
+                            android:text="联系电话" />
+
+                        <EditText
+                            android:paddingLeft="@dimen/dp_default_3"
+                            android:layout_height="@dimen/dp_default_40"
+                             android:layout_marginRight="@dimen/dp_default_5"
+                          	android:background="@drawable/weiwei_edittext_gray_transparency"
+                            android:id="@+id/et_phone"
+                            style="@style/WeiWeiAddressBase.Edit"
+                            android:hint="请输入您的联系电话"
+                            android:maxLength="11"
+                            android:phoneNumber="true" />
+                    </LinearLayout>
+
+                   <View android:layout_width="match_parent" android:layout_height="@dimen/px_default_1"
+                        android:background="#f0f0f0" />
+
+                    <LinearLayout
+                        style="@style/WeiWeiAddressLinear"
+                        android:orientation="horizontal"
+                       >
+
+                        <TextView
+                            style="@style/WeiWeiAddressBase.Text"
+                            android:text="所在区域" />
+
+                        <TextView
+                            android:id="@+id/tv_district"
+                           	android:gravity="center_vertical"
+                            android:hint="选择区域"
+                            android:layout_height="match_parent"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                       		android:textSize="@dimen/sp_default_18"
+                       		android:textColorHint="@color/red"
+                            android:textColor="@color/gray_button_text_color"
+                            android:paddingRight="@dimen/dp_default_1" />
+						
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.2"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/tv_plots"
+                                android:layout_height="match_parent"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                       android:textColorHint="@color/red"
+                            android:textSize="@dimen/sp_default_18"
+                            android:textColor="@color/gray_button_text_color"
+                                android:gravity="center_vertical"
+                                android:hint="选择小区"
+                             	
+                                android:paddingRight="@dimen/dp_default_1" 
+                                android:layout_marginRight="@dimen/dp_default_3"/>
+
+                            <ImageView
+                                android:id="@+id/img1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/weiwei_more" 
+                                android:layout_marginRight="@dimen/dp_default_5"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                 <View android:layout_width="match_parent" android:layout_height="@dimen/px_default_1"
+                        android:background="#f0f0f0" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_locker"
+                        style="@style/WeiWeiAddressLinear"
+                        android:orientation="horizontal"
+                        android:visibility="gone" >
+
+                        <TextView
+                            style="@style/WeiWeiAddressBase.Text"
+                            android:text="选择小区" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                style="@style/WeiWeiAddressBase.Edit"
+                                android:hint="选择小区" />
+
+                            <ImageView
+                                android:id="@+id/img2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/weiwei_pp" 
+                                android:layout_marginRight="@dimen/dp_default_5"/>
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_locker"
+                            style="@style/WeiWeiAddressBase.Edit"
+                            android:drawableRight="@drawable/weiwei_pp"
+                            android:hint="选择柜子"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+          <View android:layout_width="match_parent" android:layout_height="@dimen/px_default_1"
+                        android:background="#f0f0f0" android:visibility="gone"/>
+
+                    <LinearLayout android:layout_marginBottom="@dimen/dp_default_10"  android:layout_marginTop="@dimen/dp_default_10" style="@style/WeiWeiAddressLinear" android:minHeight="@dimen/dp_default_40" >
+
+                        <TextView
+                            style="@style/WeiWeiAddressBase.Text"
+                            android:layout_height="match_parent"
+                            android:text="详细地址" />
+
+                        <EditText
+                            android:id="@+id/et_address"
+                            style="@style/WeiWeiAddressBase.Edit"
+                            android:layout_height="wrap_content"
+                            android:hint="请输入您的详细地址"
+                            android:maxLength="100"
+                            android:minLines="1"
+                            android:paddingLeft="@dimen/dp_default_3"
+                            android:minHeight="@dimen/dp_default_40"
+                            android:layout_gravity="center_vertical"
+                           	android:layout_marginRight="@dimen/dp_default_5"
+                          	android:background="@drawable/weiwei_edittext_gray_transparency"
+                            android:singleLine="false" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/WeiWeiAddressLinear"
+                android:layout_margin="@dimen/dp_default_5"
+                android:paddingLeft="@dimen/dp_default_5"
+                android:background="@drawable/weiwei_base_text_bg" >
+
+                <TextView
+                    style="@style/WeiWeiAddressBase.Text"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="设为默认地址" />
+
+                <CheckBox
+                    android:id="@+id/addressSetDefaultCheckBox"
+                    style="@style/WeiWeiSwitchCheckBoxStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@id/ll_new_address"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="0dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_add"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_default_45"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginLeft="@dimen/dp_default_20"
+                android:layout_marginRight="@dimen/dp_default_20"
+                android:layout_marginTop="@dimen/dp_default_40"
+                android:background="@drawable/add_cart_button_selector"
+                android:gravity="center"
+                android:text="保存"
+                android:textColor="@color/white" />
+
+            <View
+                android:id="@+id/settingBottom"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_default_20"
+                android:layout_gravity="bottom"
+                android:background="@color/transparent" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</ScrollView>

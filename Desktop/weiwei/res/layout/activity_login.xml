@@ -1,0 +1,185 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:background="@drawable/weiwei_login_background"
+              android:orientation="vertical">
+<!--     <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+        <TextView
+                android:id="@+id/tv_title"
+                style="@style/WeiWeiHeaderBarBaseStyle_Title"
+                android:text="登录"
+                
+                />
+    <LinearLayout
+        android:id="@+id/ll_left"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:gravity="center" >
+
+        <ImageButton
+            android:id="@+id/list_header_leftbutton"
+            style="@style/WeiWeiHeaderBarBaseStyle_Left" />
+    </LinearLayout>
+
+    </RelativeLayout> -->
+    
+    <include 
+        layout="@layout/activityheader"
+        />
+
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/dp_default_15"
+            android:layout_marginRight="@dimen/dp_default_15"
+            android:layout_marginTop="@dimen/dp_default_40"
+            android:orientation="vertical">
+
+        <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/login_edit_bg"
+                android:orientation="vertical"
+                
+                
+                android:paddingTop="@dimen/dp_default_20"
+                android:paddingBottom="@dimen/dp_default_20">
+
+            <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                   
+                   
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                 	
+                 	
+                 	android:paddingTop="@dimen/dp_default_10"
+                    >
+
+                <ImageView
+                        android:id="@+id/tv_loginaccount"
+                        android:layout_width="@dimen/dp_default_37"
+                        android:layout_height="@dimen/dp_default_37"
+                        android:scaleType="center"
+                        android:src="@drawable/weiwei_icon12"/>
+                <RelativeLayout 
+                     android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="@dimen/dp_default_5"
+                        android:layout_height="match_parent"
+                    >
+                    <EditText
+                        android:id="@+id/et_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@color/transparent"
+                        android:ems="9"
+                        android:focusableInTouchMode="true"
+                        android:textColorHint="@color/login_hint_gray"
+                        android:textSize="@dimen/sp_default_16"
+                        android:singleLine="true"
+                        android:inputType="phone"
+                        android:focusable="true"
+                        android:hint="请输入用户名"
+                        android:maxEms="11"
+                        android:maxLength="11"
+                        android:paddingLeft="@dimen/dp_default_5"/>
+
+                    <ImageButton
+                        android:id="@+id/select"
+                        android:layout_width="@dimen/dp_default_30"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:background="@null"
+                        android:src="@drawable/weiwei_pulldown_button" 
+                        android:layout_marginRight="@dimen/dp_default_5"/>
+					<TextView
+					    android:id="@+id/view" 
+					    android:layout_width="match_parent" android:layout_height="@dimen/px_default_1"
+					    android:background="@color/weiwei_content_border_color" 
+					    android:layout_alignParentBottom="true"/>
+                </RelativeLayout>
+				
+                
+            </LinearLayout>
+            
+            <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    
+                    
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    
+                 	
+                 	android:paddingTop="@dimen/dp_default_10"
+                    >
+
+                <ImageView
+                        android:layout_width="@dimen/dp_default_37"
+                        android:layout_height="@dimen/dp_default_37"
+                        android:src="@drawable/weiwei_login_password"
+                        android:scaleType="center"/>
+
+
+                <EditText
+                        android:id="@+id/et_pwd"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/transparent"
+                        android:ems="10"
+                        android:focusableInTouchMode="true"
+                        android:textSize="@dimen/sp_default_16"
+                        android:password="true"
+                        android:layout_marginLeft="@dimen/dp_default_5"
+                        android:textColorHint="@color/login_hint_gray"
+                        android:singleLine="true"
+                        android:hint="请输入密码"
+                        android:maxLength="16"
+                        android:paddingLeft="5dp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+                android:id="@+id/find_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="right"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="20sp"
+                android:text="@string/login_find_password"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/sp_default_16"
+                android:layout_marginTop="@dimen/dp_default_5"/>
+
+        <Button
+                android:id="@+id/bt_login"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/login_login"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/sp_default_18"
+                android:background="@drawable/weiwei_login_submit_button"/>
+
+        <Button
+                android:id="@+id/bt_register"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_default_10"
+                android:text="@string/login_register"
+                android:textSize="@dimen/sp_default_18"
+                style="@style/WeiWeiBaseYellowButtonStyle"/>
+    </LinearLayout>
+
+</LinearLayout>

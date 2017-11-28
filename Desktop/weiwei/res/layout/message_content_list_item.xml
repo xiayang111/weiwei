@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+	android:minHeight="@dimen/dp_default_80"
+    android:orientation="horizontal"
+    android:background="@drawable/weiwei_base_text_bg" >
+
+  <TextView
+          android:id="@+id/messageStateText"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_default_5"
+            android:gravity="center"
+            android:text="•"
+            android:textColor="@color/red"
+            android:textSize="@dimen/sp_default_24"
+            android:textStyle="bold" />
+  	<LinearLayout 
+  	     android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:minHeight="@dimen/dp_default_80"
+	    android:orientation="vertical"
+  	    >
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:minHeight="@dimen/dp_default_80"
+	    android:orientation="horizontal"
+	    >
+	    <ImageView
+                android:id="@+id/messageIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_default_20"
+            android:layout_marginTop="@dimen/dp_default_10"
+            android:src="@drawable/ic_launcher" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+       		android:minHeight="@dimen/dp_default_80"
+            android:layout_marginLeft="@dimen/dp_default_5"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+	
+            <TextView
+                    android:id="@+id/messageTitle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textColor="@color/left_category_text_color"
+                android:textSize="@dimen/sp_default_14"
+                android:visibility="gone"
+                 />
+
+            <TextView
+                    android:id="@+id/messageContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="刷卡建档立卡决撒34534535大家可拉斯加对了撒即可到敬爱是大家快来撒娇的快乐撒即可大家快来撒娇的刻录机斯科拉决定了凯撒惊呆了"
+                android:layout_marginTop="@dimen/dp_default_5"
+                android:layout_marginBottom="@dimen/dp_default_5"
+                android:textColor="@color/pro_guige"
+                android:textSize="@dimen/sp_default_18" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/dp_default_5"
+            android:visibility="gone"
+            android:background="@drawable/back" />
+ 
+	    </LinearLayout>
+	 
+	</LinearLayout>
+       
+</LinearLayout>

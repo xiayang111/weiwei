@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/weiwei_content_background_color"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/dp_default_20"
+    android:paddingTop="@dimen/dp_default_20" >
+
+    <LinearLayout
+            android:id="@+id/parent_cart_list_item_header"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_default_60"
+            android:visibility="visible"
+            android:orientation="horizontal">
+        <CheckBox
+                android:id="@+id/parent_cart_list_item_checkbox"
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:checked="true"
+                android:background="@drawable/car_check_selector"
+                android:button="@null"
+                android:layout_gravity="center_vertical"
+
+                />
+        <LinearLayout
+                android:id="@+id/parent_cart_list_item_container"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginLeft="12dp">
+            <ImageView
+                	android:id="@+id/parent_cart_list_item_image"
+                    android:layout_width="@dimen/dp_default_60"
+                    android:layout_height="@dimen/dp_default_60"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/default_small"/>
+            <TextView
+                    android:id="@+id/parent_cart_list_item_title"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:lines="1"
+                    android:ellipsize="end"
+                    android:layout_marginLeft="@dimen/dp_default_5"/>
+
+            <TextView
+                    android:id="@+id/parent_cart_list_item_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="价格：100  x1"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dp_default_5"
+                    android:layout_marginRight="@dimen/dp_default_5"
+                    android:visibility="gone"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/parent_cart_list_item_motifyamount_container"
+                android:layout_width="90dp"
+                android:layout_height="50dp"
+                android:background="#ffe6e6"
+                android:orientation="vertical"
+                android:layout_gravity="bottom"
+                android:layout_marginRight="@dimen/dp_default_10">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_default_30"
+                    android:orientation="horizontal">
+                <ImageButton
+                        android:id="@+id/parent_cart_list_item_reduce"
+                        android:layout_width="@dimen/dp_default_30"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/weiwei_gouwuche_jian"
+                        android:background="@color/white"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="@dimen/dp_default_1"/>
+                <TextView
+                        android:id="@+id/parent_cart_list_item_count"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="1"
+                        android:gravity="center"
+                        android:background="@color/white"
+                        android:layout_marginTop="@dimen/dp_default_1"/>
+
+
+                <ImageButton
+                        android:id="@+id/parent_cart_list_item_plus"
+                        android:layout_width="@dimen/dp_default_30"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/weiwei_gouwuche_jia"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/white"
+                        android:layout_margin="@dimen/dp_default_1"/>
+            </LinearLayout>
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textColor="#ff0000"/>
+            </LinearLayout>
+
+            <!--<Button
+                    android:id="@+id/parent_cart_list_item_reduce"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:text="-"/>
+            <TextView
+                    android:id="@+id/parent_cart_list_item_count"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:text="1"
+                    android:gravity="center"/>
+            <Button
+                    android:id="@+id/parent_cart_list_item_plus"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:text="+"/>-->
+        </LinearLayout>
+    </LinearLayout>
+    <com.dongwukj.weiwei.ui.widget.ChildCartListView
+            android:id="@+id/child_cart_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+    </com.dongwukj.weiwei.ui.widget.ChildCartListView>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_default_1"
+            android:background="@color/weiwei_content_border_color"
+            android:layout_marginTop="@dimen/dp_default_10"/>
+    <LinearLayout
+            android:id="@+id/parent_cart_total_container"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_default_30"
+            android:layout_marginTop="@dimen/dp_default_10"
+            android:layout_marginRight="@dimen/dp_default_10">
+        <TextView
+
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="小计："
+                android:gravity="right"/>
+        <TextView
+            	android:id="@+id/tv_total_discount"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/sp_default_16"
+                android:textColor="@color/weiwei_gouwuche_red_price"
+              
+                style="@style/WeiWeiBaseRedPrice"
+                android:layout_marginRight="@dimen/dp_default_5"/>
+         <TextView
+            	android:id="@+id/tv_total_shop"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/sp_default_16"
+              
+                android:textColor="#c9c9c9"
+                android:visibility="visible"/>
+    </LinearLayout>
+    <LinearLayout 
+        android:id="@+id/ll_slogan"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_default_30"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        >
+        <TextView 
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginRight="@dimen/dp_default_5"
+           android:background="@drawable/weiwei_zengsong"
+            />
+        <TextView 
+            android:id="@+id/tv_slogan"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:textColor="#ff76a0"
+           android:text="满赠"
+            />
+        
+    </LinearLayout>
+</LinearLayout>
